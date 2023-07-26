@@ -11,7 +11,7 @@
     border-bottom: solid 1px black;
     display: flex; 
     flex-wrap: wrap;
-    height: 3rem;
+    height: 4rem;
     align-content:  center;
     justify-content: center;
     position: fixed;
@@ -45,7 +45,8 @@
     width: 95%;
     margin: auto;
     line-height: 1.5;
-    font-size: 130%;
+    font-size: 140%;
+    letter-spacing: .1rem;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -86,8 +87,15 @@
     flex: 80%;
 }
 
+.article-title {
+    line-height: 100%;
+    font-weight: bold;
+    font-height: 2rem;
+}
+
 .article-content-section {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
+    // border:solid 1px red;
 }
 
 .article-read-more > a {
