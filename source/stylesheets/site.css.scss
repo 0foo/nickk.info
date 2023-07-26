@@ -2,33 +2,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
 
 :root{
-    line-height: 1.5;
+    line-height: 2rem;
     font-size: 125%; 
 }
 
 * {
     font-family:  'Inconsolata', monospace;
+    line-height: 2rem;
+}
+
+body {
+   background-color: whitesmoke;
+}
+
+// a {
+//     .highlight:link {color:#f00;}
+//     .highlight:visited {color:#f00:}
+//     .highlight: hover {color:#f00;}
+//     .highlight:active {color:#F00;}
+//     .highlight:focus {color:#F00;}
+//}
+
+a {
+    color: black;
 }
 
 // NAVBAR
 #nav_container {
-    border: solid 1px black;
+    border-bottom: solid 1px black;
     display: flex; 
     flex-wrap: wrap;
     height: 2rem;
     align-content:  center;
-
+    position: fixed;
+    background-color: whitesmoke;
+    width: 95%;
 }
 
 .nav_item {
     padding-right: 1rem;
-    font-weight: bold;
 }
 
 .nav_item > a {
     text-decoration: none;
+    border: solid 0px black;
+    font-weight: bold;
 }
 
+#nav-spacer {
+    height: 2rem;
+}
+
+#nav-site-name {
+    font-size: 1rem;
+}
 
 // CONTENT AREA
 #content-wrapper {
@@ -50,4 +77,39 @@
 #col2 {
     // border: solid 1px orangered;
     flex: 20%;
+}
+
+.article {
+    display: flex;
+    margin: 2rem 0rem 0rem 0;
+}
+
+.article-image {
+    flex: 20%;
+    margin-right: 1em;
+}
+
+.article-image > img {
+    width:100%;
+    border-radius: 8px;
+}
+
+.article-title  > a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.article-content {
+    flex: 80%;
+    line-height: 1.5rem;
+}
+
+.article-content-section {
+    margin-bottom: 1rem;
+}
+
+.article-separator {
+    height: 1px;
+    background-color: #e0e0e0;
+    border: none;
 }

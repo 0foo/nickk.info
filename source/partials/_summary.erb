@@ -1,18 +1,23 @@
 <article class="article">
+
+    <div class="article-image">
+        <img src="/images/<%=article.data.image%>"/> 
+    </div>
+
     <div class="article-content">
-        <div>
-            <a  href="<%= article.url %>">
-                <div class="">
-                    <%= article.title %>
-                </div>
-            </a>
+
+        <div class="article-content-section article-title">
+            <a  href="<%= article.url %>"><%= article.title %></a>
         </div>
-        <div>
+
+        <div class="article-content-section article-summary">
           <%= article.summary %>
         </div>
 
-        <div class="article-read-more">
+        <div class="article-content-section article-read-more">
           <a href="<%= article.url %>"> - Read more - </a>
         </div>
     </div>
   </article>
+  
+  <hr class="article-separator"/>
