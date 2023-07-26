@@ -4,6 +4,8 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-blog'
 gem 'middleman-autoprefixer', '~> 3.0'
 gem 'middleman-livereload'
+gem 'redcarpet'
+gem 'kramdown'
 
 gem 'nokogiri'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]

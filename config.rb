@@ -42,5 +42,16 @@ activate :blog do |blog|
   blog.per_page = 5
   blog.page_link = "page/{num}"
   blog.publish_future_dated = true
-
 end
+
+# set :markdown_engine, :redcarpet
+# set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+# set :markdown_engine, :kramdown
+# set :markdown, :fenced_code_blocks => true, smartypants: true, smart_quotes: 'lsquo,rsquo,ldquo,rdquo'
+
+# These overrides hack around the fact that Tilt defaults to dumb quotes in
+# Kramdown (and Middleman currently isn't passing in those settings from the
+# :markdown settings line above)
+# Tilt::KramdownTemplate.send(:remove_const, :DUMB_QUOTES)
+# Tilt::KramdownTemplate.const_set(:DUMB_QUOTES, 'lsquo,rsquo,ldquo,rdquo')

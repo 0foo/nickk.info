@@ -1,42 +1,25 @@
 @import url("/stylesheets/reset.css");
+@import url("/stylesheets/theme.css");
+@import url("/stylesheets/markdown.css");
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap);
 
-:root{
-    line-height: 2rem;
-    font-size: 125%; 
-}
 
-* {
-    font-family:  'Inconsolata', monospace;
-    line-height: 2rem;
-}
-
-body {
-   background-color: whitesmoke;
-}
-
-// a {
-//     .highlight:link {color:#f00;}
-//     .highlight:visited {color:#f00:}
-//     .highlight: hover {color:#f00;}
-//     .highlight:active {color:#F00;}
-//     .highlight:focus {color:#F00;}
-//}
-
-a {
-    color: black;
-}
 
 // NAVBAR
 #nav_container {
     border-bottom: solid 1px black;
     display: flex; 
     flex-wrap: wrap;
-    height: 2rem;
+    height: 3rem;
     align-content:  center;
+    justify-content: center;
     position: fixed;
     background-color: whitesmoke;
     width: 95%;
+    font-size: 2rem;
+    font-family:  'Inconsolata', monospace;
+    color: black;
 }
 
 .nav_item {
@@ -50,17 +33,21 @@ a {
 }
 
 #nav-spacer {
-    height: 2rem;
+    height: 4rem;
 }
 
 #nav-site-name {
-    font-size: 1rem;
+    // font-size: 2rem;
 }
 
 // CONTENT AREA
 #content-wrapper {
     width: 95%;
     margin: auto;
+    line-height: 1.5;
+    font-size: 130%;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 #column-wrapper{
@@ -94,18 +81,17 @@ a {
     border-radius: 8px;
 }
 
-.article-title  > a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+
 .article-content {
     flex: 80%;
-    line-height: 1.5rem;
 }
 
 .article-content-section {
     margin-bottom: 1rem;
+}
+
+.article-read-more > a {
+    color: #c49991;
 }
 
 .article-separator {
