@@ -1,0 +1,8 @@
+<% wrap_layout :layout do %>
+    <% blog.articles[0...5].each do |article| %>
+     <a href="<%= article.url %>">article</a>
+    <% end %>
+<% end %>
+
+
+

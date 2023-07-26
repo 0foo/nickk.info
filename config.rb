@@ -15,34 +15,32 @@ page '/*.txt', layout: false
 
 
 activate :livereload
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
 
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
+page "/", :layout => "home"
 
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+activate :blog do |blog|
+  # This will add a prefix to all links, template references and source paths
+  #blog.prefix = "articles"
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
+  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  # Matcher for blog source files
+  blog.sources = "articles/{title}.html"
+  # blog.taglink = "tags/{tag}.html"
+  blog.layout = "layouts/article" # the layout to use for a single article
+  blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 200
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.default_extension = ".markdown"
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
 
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+  # Enable pagination
+  blog.paginate = false
+  blog.per_page = 5
+  blog.page_link = "page/{num}"
+  blog.publish_future_dated = true
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+end

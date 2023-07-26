@@ -1,24 +1,53 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+@import url("/stylesheets/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+
+:root{
+    line-height: 1.5;
+    font-size: 125%; 
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+* {
+    font-family:  'Inconsolata', monospace;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+// NAVBAR
+#nav_container {
+    border: solid 1px black;
+    display: flex; 
+    flex-wrap: wrap;
+    height: 2rem;
+    align-content:  center;
+
+}
+
+.nav_item {
+    padding-right: 1rem;
+    font-weight: bold;
+}
+
+.nav_item > a {
+    text-decoration: none;
+}
+
+
+// CONTENT AREA
+#content-wrapper {
+    width: 95%;
+    margin: auto;
+}
+
+#column-wrapper{
+    display: flex;
+    width: 100%;
+}
+ 
+
+#col1 {
+    // border: solid 1px blue;
+    flex: 80%;
+}
+
+#col2 {
+    // border: solid 1px orangered;
+    flex: 20%;
 }
