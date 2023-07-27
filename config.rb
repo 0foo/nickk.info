@@ -28,7 +28,7 @@ activate :blog do |blog|
   # blog.taglink = "tags/{tag}.html"
   blog.layout = "layouts/article" # the layout to use for a single article
   blog.summary_separator = /(READMORE)/
-  blog.summary_length = 500
+  blog.summary_length = 300
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
@@ -38,14 +38,14 @@ activate :blog do |blog|
   # blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  blog.paginate = false
+  blog.paginate = true
   blog.per_page = 5
   blog.page_link = "page/{num}"
   blog.publish_future_dated = true
 end
 
-# set :markdown_engine, :redcarpet
-# set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 # set :markdown_engine, :kramdown
 # set :markdown, :fenced_code_blocks => true, smartypants: true, smart_quotes: 'lsquo,rsquo,ldquo,rdquo'

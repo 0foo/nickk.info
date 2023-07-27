@@ -1,6 +1,6 @@
 ---
 title: Example Article 1
-date: 2012-01-03 20:46 UTC
+date: 2012-01-09 20:46 UTC
 tags: example
 pageable: true
 image: F0YgZZdXgAA8wrh.jpeg

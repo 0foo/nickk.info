@@ -1,7 +1,8 @@
 ---
-title: Example Article 2
+title: An interesting bug
 date: 2012-01-02 20:46 UTC
 tags: example
+pageable: true
 image: b3b07eee99fb28843b92f10ab2f20908fbd90e91.jpg
 ---
 
@@ -11,13 +12,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit elit 
 
 
 ```
-
 This is a code block
 
 function test(){
     echo "this is a code block"
 }
-
 ```
 
 Praesent tellus urna, iaculis vel dignissim ultricies, semper sit amet nisl. Mauris ut mi mattis, tempor libero vitae, convallis libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam eget scelerisque lacus, tristique volutpat lectus. Proin nisl dolor, malesuada commodo lobortis nec, bibendum sed leo. Nulla tempor condimentum risus, ac auctor metus dapibus id. Cras vel imperdiet dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sollicitudin vulputate ipsum. Suspendisse eget sollicitudin velit. Phasellus bibendum sodales nulla ac tempor. Suspendisse blandit, mauris nec accumsan euismod, nisl mi dignissim dolor, vitae feugiat justo risus a nisi. Morbi fermentum, lectus vel mattis tempor, augue tellus hendrerit ante, a tempor est sem id lectus.
