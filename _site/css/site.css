@@ -129,6 +129,7 @@ body {
 .article-read-more  {
   margin-top: 2rem;
 }
+
 .article-read-more > a {
     color: #c49991;
 }
@@ -160,23 +161,32 @@ body {
  
 
 @media only screen and (max-width: 768px) {
-  .article-content {
-    flex: 100%;
-}
-  .article-image {
-    display: none;
-    flex: 0%;
+  .article {
+    flex-flow:column;
   }
 
+  .article-content {
+    flex: 90%;
+    margin:0;
+  }
+
+  .article-image {
+    flex: 10%;
+    margin: 0;
+}
+
+.article-separator {
+  height: 3px;
+}
+
   #col1 {
-    /* border: solid 1px blue; */
    flex: 100%;
   }
 
 #col2 {
     /* border: solid 1px orangered; */
   display: none;
-   flex: 0%;
+   flex: %;
 }
 #nav_container {
   flex-flow: column wrap;
