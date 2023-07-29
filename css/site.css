@@ -23,7 +23,7 @@ body {
     height: auto;
     align-content:  center; 
     justify-content: center; 
-    /* position: fixed; */
+    position: fixed;
     background-color: whitesmoke;
     width: 95%;
     font-size: 2rem;
@@ -186,12 +186,16 @@ body {
 #col2 {
     /* border: solid 1px orangered; */
   display: none;
-   flex: %;
+   flex:0%;
 }
 #nav_container {
   flex-flow: column wrap;
   justify-content: left;
   align-content: start;
+  position:relative;
+}
+#nav-spacer {
+  display: none;
 }
 .nav_spacer {
   display: none;
