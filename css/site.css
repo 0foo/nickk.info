@@ -178,6 +178,14 @@ body {
   display: none;
    flex: 0%;
 }
+#nav_container {
+  flex-flow: column wrap;
+  justify-content: left;
+  align-content: start;
+}
+.nav_spacer {
+  display: none;
+}
 
 /* #content-wrapper #content-full-wrapper {
   width:95%;
