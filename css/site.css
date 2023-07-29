@@ -20,10 +20,10 @@ body {
 #nav_container {
     border-bottom: solid 1px black;
     display: flex; 
-    height: 4rem;
+    height: auto;
     align-content:  center; 
     justify-content: center; 
-    position: fixed;
+    /* position: fixed; */
     background-color: whitesmoke;
     width: 95%;
     font-size: 2rem;
@@ -33,6 +33,7 @@ body {
     margin-left: 2.5%;
     list-style: none;
     flex-flow: row wrap;
+    box-sizing: border-box;
 }
 
 .nav_item {
