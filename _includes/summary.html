@@ -1,0 +1,33 @@
+<article class="article">
+
+    <div class="article-image">
+        {% if post.image %}
+        <img src="/images/{{ post.image }}"/> 
+        {% else %}
+        <img src="/images/dummy.png"/> 
+
+        {% endif %}
+    </div>
+
+    <div class="article-content">
+
+        <div class="article-content-section article-title">
+            <a  href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+
+        <div class="article-content-section article-summary">
+            
+                {{ post.excerpt }}
+  
+        </div>
+
+        <div class="article-content-section article-read-more">
+          <a href="{{ post.url }}"> - Read more - </a>
+        </div>
+    </div>
+  </article>
+  
+  <hr class="article-separator"/>
+
+
+  

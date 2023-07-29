@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    {% include header.html %}
+</head>
+
+<body>
+  
+  {% include navbar.html %}
+
+  <div id="content-wrapper">
+
+    <div id="column-wrapper">
+
+      <div id="col1">
+
+        <!-- This loops through the paginated posts -->
+        {% for post in paginator.posts %}
+          {% include summary.html %}
+        {% endfor %}
+        
+        {% include pagination.html %}
+      </div>
+
+
+      <div id="col2">
+        Column 2
+      </div>
+    </div>  
+
+  </div>
+
+
+<footer>
+</footer>
+
+
+</body>
+</html> 
