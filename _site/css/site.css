@@ -32,6 +32,7 @@ body {
     line-height: 4rem;
     margin-left: 2.5%;
     list-style: none;
+    flex-flow: row wrap;
 }
 
 .nav_item {
