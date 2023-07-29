@@ -167,13 +167,14 @@ body {
 
   .article-content {
     flex: 90%;
-    margin:0;
+    margin-top: 2rem;
   }
 
   .article-image {
     flex: 10%;
     margin: 0;
 }
+
 
 .article-separator {
   height: 3px;
