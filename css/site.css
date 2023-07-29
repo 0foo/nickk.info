@@ -67,7 +67,7 @@ body {
 }
 
 #content-full-wrapper {
-  width: 80%;
+  width: 95%;
   margin: auto;
   line-height: 1.5;
   font-size: 120%;
@@ -178,6 +178,11 @@ body {
   display: none;
    flex: 0%;
 }
+
+/* #content-wrapper #content-full-wrapper {
+  width:95%;
+} */
+
   
 }
  
