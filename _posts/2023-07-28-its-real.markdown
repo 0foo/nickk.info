@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "This mofo is real!"
+title:  "This site is real!"
 date:   2023-07-28 18:17:26 +0000
 image: F0YgZZdXgAA8wrh.jpeg
 ---
 
-This is the latest iteration of this blog, after approx a million iterations over many years.  I have more fun making the blog than actually posting to it. 
+This is the latest iteration of this blog, after approx a million iterations over many years.  
 
 
 Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.
