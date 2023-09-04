@@ -30,7 +30,8 @@ a {
 	text-decoration: none;
 	color: black;
 }
-/* delete whrn finished testing */
+
+/* delete when finished testing */
 body {
 	padding-bottom: 500px;
 }
@@ -46,6 +47,7 @@ img {
   border-radius: 10px;
   display: block;
 }
+
 
  /* CONTENT AREA */
 #content-wrapper {
@@ -64,3 +66,4 @@ img {
 
  
  
+

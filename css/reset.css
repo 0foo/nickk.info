@@ -55,6 +55,13 @@ table {
 }
 
 
+pre {
+	min-width: -webkit-fill-available;
+	min-width: -moz-available;
+	min-width: stretch;
+	max-width: 0;
+  }
+
 /* 
 html,
 body,
