@@ -18,16 +18,13 @@ body {
 
 /* font related */
 body {
-  letter-spacing: .1rem;
+  /* letter-spacing: .1rem; */
   /* word-spacing: .1rem; */
   font-size: 1.1rem;
   font-family: 'Roboto', sans-serif;
   color: var(--font-color);
 }
 
-h2 {
-
-}
 
 a {
 	text-decoration: none;
