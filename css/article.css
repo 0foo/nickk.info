@@ -5,6 +5,7 @@
 
 .article-image {
     flex: 10%;
+    flex-shrink: 0;
     margin-right: 1em;
 }
 
