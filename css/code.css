@@ -1,14 +1,16 @@
-
+.highlight{
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 10px;
+  overflow: scroll;
+}
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
   color: #d0d0d0;
   background-color: #151515;
-  padding: 1rem;
-  margin-top: 1rem;
-  /* overflow:scroll; */
-  border-radius: 10px;
 }
+
 .highlight .err {
   color: #151515;
   background-color: #ac4142;

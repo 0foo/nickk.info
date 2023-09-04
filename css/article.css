@@ -10,10 +10,21 @@
 }
 
 
-
 .article-content {
     flex: 80%;
+    flex-shrink: 1;
+    min-width: none;
 }
+
+/* .highlighter-rouge {
+    width:100%;
+    overflow:scroll;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem; 
+    border:solid 1px black;
+  } */
+
 
 .article-title {
     /* line-height: 100%; */
