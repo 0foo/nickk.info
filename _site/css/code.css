@@ -1,3 +1,4 @@
+
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
@@ -5,7 +6,8 @@
   background-color: #151515;
   padding: 1rem;
   margin-top: 1rem;
-  overflow:scroll;
+  /* overflow:scroll; */
+  border-radius: 10px;
 }
 .highlight .err {
   color: #151515;
