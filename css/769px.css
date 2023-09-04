@@ -1,0 +1,48 @@
+@media only screen and (max-width: 768px) {
+    .article {
+      flex-flow:column;
+    }
+  
+    .article-content {
+      flex: 90%;
+      margin-top: 2rem;
+    }
+  
+    .article-image {
+      flex: 10%;
+      margin: 0;
+  }
+  
+  
+  .article-separator {
+    height: 3px;
+  }
+  
+    #col1 {
+     flex: 100%;
+    }
+  
+  #col2 {
+      /* border: solid 1px orangered; */
+    display: none;
+     flex:0%;
+  }
+  #nav_container {
+    flex-flow: column wrap;
+    justify-content: left;
+    align-content: start;
+    position:relative;
+  }
+  #nav-spacer {
+    display: none;
+  }
+  .nav_spacer {
+    display: none;
+  }
+  
+  /* #content-wrapper #content-full-wrapper {
+    width:95%;
+  } */
+  
+    
+  }
