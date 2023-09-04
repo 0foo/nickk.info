@@ -4,10 +4,9 @@
 
     <div class="article-image">
         {% if page.image %}
-        <img src="/images/{{ page.image }}"/> 
+        <a  href="{{ page.url }}"><img src="/images/{{ page.image }}"/></a>
         {% else %}
-        <img src="/images/dummy.png"/> 
-
+        <a  href="{{ page.url }}"><img src="/images/dummy.png"/></a> 
         {% endif %}
     </div>
 
