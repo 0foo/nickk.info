@@ -14,20 +14,19 @@ body {
   background-color: var(--main-bg-color);
   margin: 0;
   padding-bottom:500px; /* for testing navbar */
-
 }
 
 /* font related */
 body {
   letter-spacing: .1rem;
   /* word-spacing: .1rem; */
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   font-family: 'Roboto', sans-serif;
   color: var(--font-color);
 }
 
 h2 {
-  
+
 }
 
 a {
