@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-09-04T15:42:44+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cloudformation tutorial</title><link href="http://0.0.0.0:4000/2023/09/02/cloudformation-tutorial.html" rel="alternate" type="text/html" title="Cloudformation tutorial" /><published>2023-09-02T12:40:00+00:00</published><updated>2023-09-02T12:40:00+00:00</updated><id>http://0.0.0.0:4000/2023/09/02/cloudformation-tutorial</id><content type="html" xml:base="http://0.0.0.0:4000/2023/09/02/cloudformation-tutorial.html"><![CDATA[<p>TBI</p>]]></content><author><name></name></author><summary type="html"><![CDATA[TBI]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/indy-bezos.jpg" /><media:content medium="image" url="http://0.0.0.0:4000/indy-bezos.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Terrible Implementations of Is Even</title><link href="http://0.0.0.0:4000/2023/09/02/is-even.html" rel="alternate" type="text/html" title="Terrible Implementations of Is Even" /><published>2023-09-02T12:06:00+00:00</published><updated>2023-09-02T12:06:00+00:00</updated><id>http://0.0.0.0:4000/2023/09/02/is-even</id><content type="html" xml:base="http://0.0.0.0:4000/2023/09/02/is-even.html"><![CDATA[<p>I stumbled on this written as a joke somewhere on the web and found it hilariously terrible. <br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-09-04T16:19:54+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cloudformation tutorial</title><link href="http://0.0.0.0:4000/2023/09/02/cloudformation-tutorial.html" rel="alternate" type="text/html" title="Cloudformation tutorial" /><published>2023-09-02T12:40:00+00:00</published><updated>2023-09-02T12:40:00+00:00</updated><id>http://0.0.0.0:4000/2023/09/02/cloudformation-tutorial</id><content type="html" xml:base="http://0.0.0.0:4000/2023/09/02/cloudformation-tutorial.html"><![CDATA[<p>TBI</p>]]></content><author><name></name></author><summary type="html"><![CDATA[TBI]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/indy-bezos.jpg" /><media:content medium="image" url="http://0.0.0.0:4000/indy-bezos.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Terrible Implementations of Is Even</title><link href="http://0.0.0.0:4000/2023/09/02/is-even.html" rel="alternate" type="text/html" title="Terrible Implementations of Is Even" /><published>2023-09-02T12:06:00+00:00</published><updated>2023-09-02T12:06:00+00:00</updated><id>http://0.0.0.0:4000/2023/09/02/is-even</id><content type="html" xml:base="http://0.0.0.0:4000/2023/09/02/is-even.html"><![CDATA[<p>I stumbled on this written as a joke somewhere on the web and found it hilariously terrible. <br />
 What a way to turn a O(1) modulus operation into the glorious abomination you see here.  <br />
 This algorithm has a runtime of O(2n). <br /></p>
 
@@ -19,9 +19,13 @@ This algorithm has a runtime of O(2n). <br /></p>
 Runtime(x-1) = Runtime(x-2) + Runtime(x-3) + ... + Runtime(0)  
 Runtime(x) = 2 * Runtime(x-1) = 2 * 2 * Runtime(x-2) = ... = 2 * 2 * 2 * ... * Runtime(0) = 2^x * const. 
 
-</code></pre></div></div>]]></content><author><name></name></author><category term="algorithms" /><summary type="html"><![CDATA[I stumbled on this written as a joke somewhere on the web and found it hilariously terrible. What a way to turn a O(1) modulus operation into the glorious abomination you see here. This algorithm has a runtime of O(2n).]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/orielly-cover-1.jpg" /><media:content medium="image" url="http://0.0.0.0:4000/orielly-cover-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">This site is real!</title><link href="http://0.0.0.0:4000/2023/07/28/its-real.html" rel="alternate" type="text/html" title="This site is real!" /><published>2023-07-28T18:17:26+00:00</published><updated>2023-07-28T18:17:26+00:00</updated><id>http://0.0.0.0:4000/2023/07/28/its-real</id><content type="html" xml:base="http://0.0.0.0:4000/2023/07/28/its-real.html"><![CDATA[<p>This is the latest iteration of this blog, after approx a million iterations over many years.</p>
+</code></pre></div></div>]]></content><author><name></name></author><category term="algorithms" /><summary type="html"><![CDATA[I stumbled on this written as a joke somewhere on the web and found it hilariously terrible. What a way to turn a O(1) modulus operation into the glorious abomination you see here. This algorithm has a runtime of O(2n).]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/orielly-cover-1.jpg" /><media:content medium="image" url="http://0.0.0.0:4000/orielly-cover-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">This site is real!</title><link href="http://0.0.0.0:4000/2023/07/28/its-real.html" rel="alternate" type="text/html" title="This site is real!" /><published>2023-07-28T18:17:26+00:00</published><updated>2023-07-28T18:17:26+00:00</updated><id>http://0.0.0.0:4000/2023/07/28/its-real</id><content type="html" xml:base="http://0.0.0.0:4000/2023/07/28/its-real.html"><![CDATA[<p>This is the latest iteration of this blog, after approx a million iterations over a long time.</p>
 
 <p>Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.</p>
+
+<p>As a backend developer mostly, CSS is stressful in the amount of non-intuitive gotchas just built in.</p>
+
+<p>A CSS guru is worth their weight in gold.</p>
 
 <p><br /></p>
 
@@ -36,24 +40,35 @@ Runtime(x) = 2 * Runtime(x-1) = 2 * 2 * Runtime(x-2) = ... = 2 * 2 * 2 * ... * R
   <li>Bullets:
     <ul>
       <li>Why is <code class="language-plaintext highlighter-rouge">margin-left:1rem;</code> not the default for list items</li>
-      <li>why is <code class="language-plaintext highlighter-rouge">list-style-position: inside</code> almost there except that on the newline the text flows under the bullet.</li>
+      <li>why is <code class="language-plaintext highlighter-rouge">list-style-position: inside</code> almost there except that on the newline the text flows under the bullet, instead of indenting.</li>
     </ul>
   </li>
-  <li>Flexbox
+  <li>code blocks and pre tag
+    <ul>
+      <li>This caused me much headache as the pre tag has presets that ignore style rules and break your layout by not shrinking properly.</li>
+      <li>This is the fix:</li>
+      <li>
+        <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">pre</span> <span class="p">{</span>
+  <span class="nl">min-width</span><span class="p">:</span> <span class="n">-webkit-fill-available</span><span class="p">;</span>
+  <span class="nl">min-width</span><span class="p">:</span> <span class="n">-moz-available</span><span class="p">;</span>
+  <span class="nl">min-width</span><span class="p">:</span> <span class="n">stretch</span><span class="p">;</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>overflow
+    <ul>
+      <li>overflow: auto vs overflow: scroll</li>
+      <li>scroll bars break border-radius</li>
+    </ul>
+  </li>
+  <li>The good
     <ul>
       <li>Flexbox is awesome generally.</li>
-    </ul>
-  </li>
-  <li>Units
-    <ul>
-      <li>Using rem units is awesome.</li>
-    </ul>
-  </li>
-  <li>General
-    <ul>
-      <li>I wish there was or I knew about a debug tool that you could turn on in the browser to add 1px borders to some/all elements.</li>
+      <li>Using rem units is cool.</li>
       <li><code class="language-plaintext highlighter-rouge">position:fixed</code> with a div spacer of the same height underneath is a cool way to make a sticky nav bar.</li>
-      <li>I made a side bar but not sure what to do with it yet.</li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[This is the latest iteration of this blog, after approx a million iterations over many years.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/F0YgZZdXgAA8wrh.jpeg" /><media:content medium="image" url="http://0.0.0.0:4000/F0YgZZdXgAA8wrh.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[This is the latest iteration of this blog, after approx a million iterations over a long time.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/F0YgZZdXgAA8wrh.jpeg" /><media:content medium="image" url="http://0.0.0.0:4000/F0YgZZdXgAA8wrh.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

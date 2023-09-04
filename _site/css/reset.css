@@ -59,6 +59,9 @@ pre {
 	max-width: 0;
   }
 
+img {
+	display: block;
+}
 /* 
 html,
 body,

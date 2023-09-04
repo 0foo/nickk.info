@@ -5,11 +5,14 @@ date:   2023-07-28 18:17:26 +0000
 image: F0YgZZdXgAA8wrh.jpeg
 ---
 
-This is the latest iteration of this blog, after approx a million iterations over many years.  
+This is the latest iteration of this blog, after approx a million iterations over a long time.  
 
 
 Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.
 
+As a backend developer mostly, CSS is stressful in the amount of non-intuitive gotchas just built in. 
+
+A CSS guru is worth their weight in gold.
 
 <br/>
 
@@ -17,16 +20,32 @@ Not much else to say other than this time around everyting is raw css, html, and
 ## CSS
 * Images:
     * Why does an image have to be set to `display:block` to not have a margin at the bottom? 
+
 * Bullets:
     * Why is `margin-left:1rem;` not the default for list items 
-    * why is `list-style-position: inside` almost there except that on the newline the text flows under the bullet.
-* Flexbox
+    * why is `list-style-position: inside` almost there except that on the newline the text flows under the bullet, instead of indenting.
+
+* code blocks and pre tag
+    *  This caused me much headache as the pre tag has presets that ignore style rules and break your layout by not shrinking properly.
+    * This is the fix:
+    * ```css
+pre {
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
+    min-width: stretch;
+    max-width: 0;
+}
+```
+
+* overflow
+    * overflow: auto vs overflow: scroll
+    * scroll bars break border-radius 
+
+* The good
     * Flexbox is awesome generally.
-* Units
-    * Using rem units is awesome.
-* General
-    * I wish there was or I knew about a debug tool that you could turn on in the browser to add 1px borders to some/all elements.
+    * Using rem units is cool.
     * `position:fixed` with a div spacer of the same height underneath is a cool way to make a sticky nav bar. 
-    * I made a side bar but not sure what to do with it yet.
+
+
 
 
