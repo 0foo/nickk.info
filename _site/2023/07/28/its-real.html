@@ -11,6 +11,10 @@
 <link rel="stylesheet" href="/css/reset.css">
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/code.css">
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/content.css">
+<link rel="stylesheet" href="/css/article.css">
+<link rel="stylesheet" href="/css/768px.css">
 
 
 </head>
@@ -28,52 +32,81 @@
 </ul> 
 <div id="nav-spacer"></div>
 
+<div id="content-wrapper">
+  <div id="column-wrapper">
+    <div id="col1">
+      
 
-<div id="content-full-wrapper">
+<article class="article">
 
-      <article class="article">
+    <div class="article-image">
+        
+        <img src="/images/F0YgZZdXgAA8wrh.jpeg"/> 
+        
+    </div>
 
-        <div class="article-image">
-            
-            <img src="/images/F0YgZZdXgAA8wrh.jpeg"/> 
-            
+    <div class="article-content">
+       
+        <div class="article-content-section article-title">
+            <a  href="/2023/07/28/its-real.html">This site is real!</a>
         </div>
-    
-        <div class="article-content">
-    
-            <div class="article-content-section article-title">
-                <a  href="/2023/07/28/its-real.html">This site is real!</a>
-            </div>
-    
-            <div class="article-content-section article-summary">
-                
-                    <p>This is the latest iteration of this blog, after approx a million iterations over many years.</p>
+
+        <div class="article-content-section article-summary">
+            
+                <p>This is the latest iteration of this blog, after approx a million iterations over many years.</p>
 
 <p>Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.</p>
 
 <p><br /></p>
 
 <p><u>Learnings/Impressions</u></p>
+<h2 id="css">CSS</h2>
 <ul>
-  <li>CSS…why?</li>
-  <li>Why does an image have to be set to <code class="language-plaintext highlighter-rouge">display:block</code> to not have a margin at the bottom?</li>
-  <li>Why is <code class="language-plaintext highlighter-rouge">margin-left:1rem;</code> not the default for list items and why is <code class="language-plaintext highlighter-rouge">list-style-position: inside</code> almost there except that on the newline the text flows under the bullet.</li>
-  <li>So many more CSS questions.</li>
-  <li>On the bright side: Flexbox is awesome.</li>
-  <li>Using rem units is awesome.</li>
-  <li>I wish there was a debug tool that you could turn on in the browser to add 1px borders to some/all elements.</li>
-  <li><code class="language-plaintext highlighter-rouge">position:fixed</code> with a div spacer of the same height underneath is a cool way to make a sticky nav bar.</li>
-  <li>I made a side bar but not sure what to do with it yet.</li>
+  <li>Images:
+    <ul>
+      <li>Why does an image have to be set to <code class="language-plaintext highlighter-rouge">display:block</code> to not have a margin at the bottom?</li>
+    </ul>
+  </li>
+  <li>Bullets:
+    <ul>
+      <li>Why is <code class="language-plaintext highlighter-rouge">margin-left:1rem;</code> not the default for list items</li>
+      <li>why is <code class="language-plaintext highlighter-rouge">list-style-position: inside</code> almost there except that on the newline the text flows under the bullet.</li>
+    </ul>
+  </li>
+  <li>Flexbox
+    <ul>
+      <li>Flexbox is awesome generally.</li>
+    </ul>
+  </li>
+  <li>Units
+    <ul>
+      <li>Using rem units is awesome.</li>
+    </ul>
+  </li>
+  <li>General
+    <ul>
+      <li>I wish there was or I knew about a debug tool that you could turn on in the browser to add 1px borders to some/all elements.</li>
+      <li><code class="language-plaintext highlighter-rouge">position:fixed</code> with a div spacer of the same height underneath is a cool way to make a sticky nav bar.</li>
+      <li>I made a side bar but not sure what to do with it yet.</li>
+    </ul>
+  </li>
 </ul>
 
 
-      
-            </div>
+            
+  
         </div>
-      </article>
-      
+        
     </div>
+  </article>
+  
 
+
+
+  
+    </div>
+    </div>
+</div>
 
 
 <footer>

@@ -1,212 +1,71 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap");
-/* 
-pre,
-code {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+
+
+
+:root {
+  --main-bg-color: whitesmoke;
+  --font-color: #444;
 }
 
-pre {
-  background-color: #fafafa;
-  font-size: .8rem;
-  overflow-x: scroll;
-  padding: 1.125em;
-} */
+
+/* Base Element Styling */
 body {
-  padding-bottom: 5%;
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding-bottom:500px; /* for testing navbar */
+
 }
 
- /* NAVBAR */
-#nav_container {
-    border-bottom: solid 1px black;
-    display: flex; 
-    height: auto;
-    align-content:  center; 
-    justify-content: center; 
-    position: fixed;
-    background-color: whitesmoke;
-    width: 95%;
-    font-size: 2rem;
-    font-family:  'Inconsolata', monospace;
-    color: black;
-    line-height: 4rem;
-    margin-left: 2.5%;
-    list-style: none;
-    flex-flow: row wrap;
-    box-sizing: border-box;
+/* font related */
+body {
+  letter-spacing: .1rem;
+  /* word-spacing: .1rem; */
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--font-color);
 }
 
-.nav_item {
-    padding-right: 1rem;
+h2 {
+  
 }
 
-.nav_item > a {
-    text-decoration: none;
-    border: solid 0px black;
-    font-weight: bold;
+a {
+	text-decoration: none;
+	color: black;
+}
+/* delete whrn finished testing */
+body {
+	padding-bottom: 500px;
 }
 
-#nav-spacer {
-    height: 4rem;
+hr {
+  margin:0;
+  padding:0;
 }
 
-#nav-site-name {
-    /* font-size: 2rem; */
+/* Set all images to fill/be controlled by their container, add a radius for enhanced fanciness  */
+img {
+  width:100%;
+  border-radius: 10px;
+  display: block;
 }
+
 
  /* CONTENT AREA */
 #content-wrapper {
     width: 95%;
     margin: auto;
-    line-height: 1.5;
-    font-size: 120%;
-    letter-spacing: .1rem;
-    word-spacing: .15rem;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-#content-full-wrapper {
-  width: 95%;
-  margin: auto;
-  line-height: 1.5;
-  font-size: 120%;
-  letter-spacing: .1rem;
-  word-spacing: .15rem;
-  font-family: 'Roboto', sans-serif;
-}
-
-#column-wrapper{
     display: flex;
-    width: 100%;
 }
- 
 
 #col1 {
      /* border: solid 1px blue; */
-    flex: 80%;
-}
-
-#col2 {
-     /* border: solid 1px orangered; */
-    flex: 20%;
-}
-
-.article {
-    display: flex;
-    margin: 2rem 0rem 2rem 0;
-}
-
-.article-image {
-    flex: 20%;
-    margin-right: 1em;
-}
-
-.article-image > img {
-    width:100%;
-    border-radius: 10px;
-    display: block;
-}
-
-.article-content {
-    flex: 80%;
-}
-
-.article-title {
-    /* line-height: 100%; */
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.article-content-section {
-    /* margin: 0 0 0rem 0; */
-     /* border:solid 1px red;  */
-     font-size:1.5rem;
-     /* margin-bottom: 2rem; */
-}
-
-.article-read-more  {
-  margin-top: 2rem;
-}
-
-.article-read-more > a {
-    color: #c49991;
-}
-
-.article-separator {
-    height: 1px;
-    background-color: #e0e0e0;
-    border: none;
-}
-
-body {
-    background-color: whitesmoke;
-    margin: 0;
-    color: #444;
- }
- 
- a {
-     color: #444;
- }
-
- hr {
-  margin:0;
-  padding:0;
- }
- 
- .article-separator:last-of-type{
-    display: none;
-}
- 
-
-@media only screen and (max-width: 768px) {
-  .article {
-    flex-flow:column;
-  }
-
-  .article-content {
-    flex: 90%;
-    margin-top: 2rem;
-  }
-
-  .article-image {
-    flex: 10%;
-    margin: 0;
+    flex: 100%;
 }
 
 
-.article-separator {
-  height: 3px;
-}
 
-  #col1 {
-   flex: 100%;
-  }
 
-#col2 {
-    /* border: solid 1px orangered; */
-  display: none;
-   flex:0%;
-}
-#nav_container {
-  flex-flow: column wrap;
-  justify-content: left;
-  align-content: start;
-  position:relative;
-}
-#nav-spacer {
-  display: none;
-}
-.nav_spacer {
-  display: none;
-}
-
-/* #content-wrapper #content-full-wrapper {
-  width:95%;
-} */
-
-  
-}
  
  

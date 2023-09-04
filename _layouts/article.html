@@ -9,36 +9,13 @@
   
   {% include navbar.html %}
 
-
-<div id="content-full-wrapper">
-
-      <article class="article">
-
-        <div class="article-image">
-            {% if page.image %}
-            <img src="/images/{{ page.image }}"/> 
-            {% else %}
-            <img src="/images/dummy.png"/> 
-    
-            {% endif %}
-        </div>
-    
-        <div class="article-content">
-    
-            <div class="article-content-section article-title">
-                <a  href="{{ page.url }}">{{ page.title }}</a>
-            </div>
-    
-            <div class="article-content-section article-summary">
-                
-                    {{ page.content }}
-      
-            </div>
-        </div>
-      </article>
-      
+<div id="content-wrapper">
+  <div id="column-wrapper">
+    <div id="col1">
+      {% include summary.html %}
     </div>
-
+    </div>
+</div>
 
 
 <footer>

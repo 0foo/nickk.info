@@ -3,6 +3,8 @@
 .highlight, .highlight .w {
   color: #d0d0d0;
   background-color: #151515;
+  padding: 10px;
+  overflow:scroll;
 }
 .highlight .err {
   color: #151515;

@@ -16,16 +16,12 @@
       <div id="col1">
 
         <!-- This loops through the paginated posts -->
-        {% for post in paginator.posts %}
-          {% include summary.html %}
+        {% for page in paginator.posts %}
+          {% include summary.html is_excerpt="true" %}
+          <hr class="article-separator"/>
         {% endfor %}
         
         {% include pagination.html %}
-      </div>
-
-
-      <div id="col2">
-        Column 2
       </div>
     </div>  
 

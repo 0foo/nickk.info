@@ -48,8 +48,9 @@ table {
 	border-spacing: 0;
 }
 * {
-	/* box-sizing: border-box */
+	box-sizing: border-box;
 }
+
 
 /* 
 html,
@@ -65,4 +66,5 @@ textarea {
 } */
 
 
-/* end reset */
+/* end Eric Meyer reset */
+
