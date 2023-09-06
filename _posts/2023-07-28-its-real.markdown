@@ -3,6 +3,7 @@ layout: article
 title:  "This site is real!"
 date:   2023-07-28 18:17:26 +0000
 image: F0YgZZdXgAA8wrh.jpeg
+excerpt_separator: <!--more-->
 ---
 
 This is the latest iteration of this blog, after approx a million iterations over a long time.  
@@ -10,7 +11,7 @@ This is the latest iteration of this blog, after approx a million iterations ove
 
 Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.
 
-As a backend developer mostly, CSS is stressful in that there's a significan amount of non-intuitive gotchas just built in. 
+As a backend developer mostly, CSS is stressful in that there's a significant amount of non-intuitive gotchas just built in. 
 
 I could see how a front end CSS guru is worth their weight in gold.
 

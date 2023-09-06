@@ -30,9 +30,9 @@ In order to find places to live or visit where I can maximize the amount of time
 <br/>
 
 <u>To Do (when have time) </u>
-* At some point would like to convert this to a dynamic site where you can plot migraiton patterns to stay in comfortable weather for traveling retired or digital nomad people. 
+* At some point would like to convert this to a dynamic site where you can plot migration patterns to stay in comfortable weather for traveling retired or digital nomads. 
 * Would like to be able to dynamically input your own custom comfortable temp ranges as peoples idea of comfortable temps and temp tolerances may vary.
-* At some point would like toinclude other weather factors like sunshine, preciptation, snowfall
+* At some point would like to include other weather factors like sunshine, preciptation, snowfall
 
 <br/><br/>
 
