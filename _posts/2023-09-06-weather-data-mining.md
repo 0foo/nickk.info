@@ -34,5 +34,8 @@ In order to find places to live or visit where I can maximize the amount of time
 * Would like to be able to dynamically input your own custom comfortable temp ranges as peoples idea of comfortable temps and temp tolerances may vary.
 * At some point would like toinclude other weather factors like sunshine, preciptation, snowfall
 
+<br/><br/>
+
+* Note: on this map the field labeled count is months within the comfort zone of 30 to 75.
 <br/>
-![Comfortable](/images/comfort.png)
+<iframe src="https://www.google.com/maps/d/embed?mid=11qYJOQ2cX9j3T-x5UO5ykXmjUToSdEs&ehbc=2E312F" width="100%" height="800"></iframe>
