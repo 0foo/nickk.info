@@ -10,11 +10,13 @@ This is the latest iteration of this blog, after approx a million iterations ove
 
 Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.
 
-As a backend developer mostly, CSS is stressful in the amount of non-intuitive gotchas just built in. 
+As a backend developer mostly, CSS is stressful in that there's a significan amount of non-intuitive gotchas just built in. 
 
-A CSS guru is worth their weight in gold.
+I could see how a front end CSS guru is worth their weight in gold.
 
 <br/>
+
+ <!--more-->
 
 <u>Learnings/Impressions</u>  
 ## CSS
