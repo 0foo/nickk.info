@@ -39,6 +39,7 @@ body {
 hr {
   margin:0;
   padding:0;
+  color: black;
 }
 
 /* Set all images to fill/be controlled by their container, add a radius for enhanced fanciness  */
@@ -50,15 +51,13 @@ img {
 
  /* CONTENT AREA */
 #content-wrapper {
-    width: 95%;
+    /* width: 100%; */
     margin: auto;
-    display: flex;
+    padding:0 5% 0 5%;
+
 }
 
-#col1 {
-     /* border: solid 1px blue; */
-    flex: 100%;
-}
+
 
 
 

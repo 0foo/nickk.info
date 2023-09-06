@@ -45,7 +45,7 @@ future: true
 # pagination
 paginate: 5
 
-excerpt_ separator: <!--more-->
+excerpt_separator: "<!--more-->"  #global excerpt separator for the blog posts
 
 # Exclude from processing.
 # The following items will not be processed, by default.
