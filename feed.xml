@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-09-06T13:32:52+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Weather Data Mining</title><link href="http://0.0.0.0:4000/2023/09/06/weather-data-mining.html" rel="alternate" type="text/html" title="Weather Data Mining" /><published>2023-09-06T12:16:00+00:00</published><updated>2023-09-06T12:16:00+00:00</updated><id>http://0.0.0.0:4000/2023/09/06/weather-data-mining</id><content type="html" xml:base="http://0.0.0.0:4000/2023/09/06/weather-data-mining.html"><![CDATA[<p>In order to find places to live or visit where I can maximize the amount of time I’m able to comfortably spend outside I wrote a script to calculate the locations in the US with temperatures between 30 degrees and 75 degrees for 6 months or more.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-09-06T13:34:16+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Weather Data Mining</title><link href="http://0.0.0.0:4000/2023/09/06/weather-data-mining.html" rel="alternate" type="text/html" title="Weather Data Mining" /><published>2023-09-06T12:16:00+00:00</published><updated>2023-09-06T12:16:00+00:00</updated><id>http://0.0.0.0:4000/2023/09/06/weather-data-mining</id><content type="html" xml:base="http://0.0.0.0:4000/2023/09/06/weather-data-mining.html"><![CDATA[<p>In order to find places to live or visit where I can maximize the amount of time I’m able to comfortably spend outside I wrote a script to calculate the locations in the US with temperatures between 30 degrees and 75 degrees for 6 months or more.
 <br /><br /></p>
 
 <ul>
@@ -66,11 +66,13 @@ Runtime(x) = 2 * Runtime(x-1) = 2 * 2 * Runtime(x-2) = ... = 2 * 2 * 2 * ... * R
 
 <p>Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.</p>
 
-<p>As a backend developer mostly, CSS is stressful in the amount of non-intuitive gotchas just built in.</p>
+<p>As a backend developer mostly, CSS is stressful in that there’s a significan amount of non-intuitive gotchas just built in.</p>
 
-<p>A CSS guru is worth their weight in gold.</p>
+<p>I could see how a front end CSS guru is worth their weight in gold.</p>
 
 <p><br /></p>
+
+<p><!--more--></p>
 
 <p><u>Learnings/Impressions</u></p>
 <h2 id="css">CSS</h2>
