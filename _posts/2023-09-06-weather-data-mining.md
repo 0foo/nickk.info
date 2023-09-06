@@ -12,7 +12,7 @@ In order to find places to live or visit where I can maximize the amount of time
 
 * All the data comes from NOAA weather stations and can be downloaded here: [link](https://www.ncei.noaa.gov/pub/data/ghcn/daily/)
 * The github repo is here: [https://github.com/0foo/weather_mining](https://github.com/0foo/weather_mining)
-* The google map is here: [link](https://www.google.com/maps/d/edit?mid=11qYJOQ2cX9j3T-x5UO5ykXmjUToSdEs&ll=42.70028862623725%2C-119.24163318010127&z=7)
+* The interactive google map is here: [link](https://www.google.com/maps/d/edit?mid=11qYJOQ2cX9j3T-x5UO5ykXmjUToSdEs&ll=42.70028862623725%2C-119.24163318010127&z=7)
 <br/><br/>
 
 
