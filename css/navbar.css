@@ -26,6 +26,7 @@
 
 .nav_item {
     padding-right: .2rem;
+    /* border: solid 1px blue; */
 }
 
 /* Makes the rest of the page aware of the fixed position navbar */
@@ -33,3 +34,25 @@
     height: 3rem;
 }
 
+
+.nav-img-wrapper {
+    display: inline-block;
+    /* height: auto; */
+    width:1.5rem;
+    /* height: 2rem; */
+    /* border: solid 1px red; */
+    margin-top:20%;
+    border-radius: 0px;
+
+}
+
+/* .nav-img-wrapper:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  } */
+
+.nav-img-wrapper  img {
+    border-radius: 0px;
+}
