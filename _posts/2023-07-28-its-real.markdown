@@ -9,11 +9,13 @@ excerpt_separator: <!--more-->
 This is the latest iteration of this blog, after approx a million iterations over a long time.  
 
 
-Not much else to say other than this time around everyting is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files.
+Not much else to say other than this time around everything is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files. 
 
 As a backend developer mostly, CSS is stressful in that there's a significant amount of non-intuitive gotchas just built in. 
 
 I could see how a front end CSS guru is worth their weight in gold.
+
+Frameworks like Tailwind and Bootstrap are cool but learning the base language is powerful and rewarding.
 
 <br/>
 
