@@ -17,7 +17,7 @@ pre {
   padding: 5px;
   /* -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0); */
-  /* overflow: auto; */
+  overflow: auto;
   /* display:inline-block; */
   /* width: fit-content; */
   /* box-sizing: content-box; */
