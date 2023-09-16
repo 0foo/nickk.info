@@ -23,13 +23,14 @@ I could see how a front end CSS guru is worth their weight in gold.
 ## CSS
 * Images:
     * Why does an image have to be set to `display:block` to not have a margin at the bottom? 
+    * Found it to be a struggle to vertically center an image inside of an inline-block parent container which is inside flexbox element.
 
-* Bullets:
+* List/Bullets:
     * Why is `margin-left:1rem;` not the default for list items 
     * why is `list-style-position: inside` almost there except that on the newline the text flows under the bullet, instead of indenting.
 
 * code blocks and pre tag
-    *  This caused me much headache as the pre tag has presets that ignore style rules and break your layout by not shrinking properly.
+    *  This caused me a headache as the pre tag has presets that ignore style rules and break your layout by not shrinking properly.
     * This is the fix:
     * ```css
 pre {
