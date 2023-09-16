@@ -56,10 +56,15 @@
 
 
  
- .article-separator:last-of-type{
+.article-separator:last-of-type{
     display: none;
 }
  
 #article-content {
     padding:0 5% 0 5%;
+  }
+
+  @media (max-width: 720px) {
+    .article-content { flex: 100%;}
+    .article-image { flex: 0%;}
   }
