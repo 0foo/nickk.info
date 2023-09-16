@@ -19,7 +19,7 @@ I could see how a front end CSS guru is worth their weight in gold.
 
  <!--more-->
 
-<u>Learnings/Impressions</u>  
+<u>Various Learnings/Impressions</u>  
 ## CSS
 * Images:
     * Why does an image have to be set to `display:block` to not have a margin at the bottom? 
@@ -30,6 +30,7 @@ I could see how a front end CSS guru is worth their weight in gold.
     * why is `list-style-position: inside` almost there except that on the newline the text flows under the bullet, instead of indenting.
 
 * code blocks and pre tag
+    * Would like the code block background to only expand to the width of the text instead of all across the screen. Needs more research.
     *  This caused me a headache as the pre tag has presets that ignore style rules and break your layout by not shrinking properly.
     * This is the fix:
     * ```css
