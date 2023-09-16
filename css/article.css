@@ -66,5 +66,5 @@
 
   @media (max-width: 720px) {
     .article-content { flex: 100%;}
-    .article-image { flex: 0%;}
+    .article-image { flex: 0%; margin:0; padding:0;}
   }
