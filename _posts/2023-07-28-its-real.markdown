@@ -6,23 +6,28 @@ image: F0YgZZdXgAA8wrh.jpeg
 excerpt_separator: <!--more-->
 ---
 
-This is the latest iteration of this blog, after approx a million iterations over a long time.  
+This is the latest iteration of this blog. 
 
+I have iterated through Wordpress, Hugo, Middleman, Laravel blogging framework, etc.
 
-Not much else to say other than this time around everything is raw css, html, and whatnot for the design and layout and Jekyll to generate all the static files. 
+This time around everything is raw css, html, with jekyll framework outputting a static framework and using Netlify for deployment/hosting/certificate management.
 
-As a backend developer mostly, CSS is stressful in that there's a significant amount of non-intuitive gotchas just built in. 
+Netlify is truly cool.
 
-I could see how a front end CSS guru is worth their weight in gold.
-
-Frameworks like Tailwind and Bootstrap are cool but learning the base language is powerful and rewarding.
+Also, frameworks like Tailwind and Bootstrap are cool but using plain old CSS is pretty rewarding albeit somewhat frustrating.
 
 <br/>
 
  <!--more-->
 
-<u>Various Learnings/Impressions</u>  
-## CSS
+<u>Incomplete list of obeservations about CSS</u>  
+
+##  CSS positives
+    * Flexbox is awesome generally.
+    * Using rem units is cool.
+    * `position:fixed` with a div spacer of the same height underneath is a cool way to make a sticky nav bar. 
+
+## CSS frustrations
 * Images:
     * Why does an image have to be set to `display:block` to not have a margin at the bottom? 
     * Found it to be a struggle to vertically center an image inside of an inline-block parent container which is inside flexbox element.
@@ -48,10 +53,7 @@ pre {
     * overflow: auto vs overflow: scroll
     * scroll bars break border-radius 
 
-* The good
-    * Flexbox is awesome generally.
-    * Using rem units is cool.
-    * `position:fixed` with a div spacer of the same height underneath is a cool way to make a sticky nav bar. 
+
 
 
 
