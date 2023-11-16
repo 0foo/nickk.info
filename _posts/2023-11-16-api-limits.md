@@ -5,9 +5,9 @@ tags: networking
 layout: article
 ---
 
-Most websites have API request limits __based on IP__ which are prohibited for scraping or bulk data searching/downloading.
+Most websites have API request limits __based on IP__ which make scraping or bulk data collection on their sites prohibitive.
 
-Scraping and data collection requires a LOT of requests for each new page of data which rather quickly would be rate limited slowing down your data collection to unsatisfactory speeds.
+Scraping and data collection requires a LOT of requests for each new page of data which would rather quickly be rate limited slowing down your data collection to unsatisfactory speeds.
 
 So what's the solution?  Send each request through a unique IP! 
 
