@@ -3,7 +3,8 @@
 }
 
 code {
-  display: inline-block;
+  display: block;
+  font-size: 1.2rem;
 }
 
 pre {
@@ -14,6 +15,7 @@ pre {
 .highlight{
   border-radius: 10px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 5px;
   /* -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0); */
@@ -22,6 +24,13 @@ pre {
   /* width: fit-content; */
   /* box-sizing: content-box; */
 }
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ }
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
