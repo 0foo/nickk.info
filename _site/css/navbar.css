@@ -12,11 +12,19 @@
     padding-bottom: 5px;
 }
 
+@media (max-width: 720px) {
+    #nav_container {
+        font-size: 1.5rem; 
+    }     
+  }
+
  /* External Layout */
 #nav_container {
     position: fixed;
     width: 100%;
 }
+
+
 
  /* Internal Layout */
  #nav_container {
@@ -58,3 +66,5 @@
 .nav-img-wrapper  img {
     border-radius: 0px;
 }
+
+
