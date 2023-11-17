@@ -60,6 +60,9 @@ img {
  strong{
   font-weight: bolder;
  }
+ em {
+  font-style: italic; 
+}
 
  @media (max-width: 720px) {
   body {
