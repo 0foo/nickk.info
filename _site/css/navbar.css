@@ -6,10 +6,10 @@
     /* font-family:  'Inconsolata', monospace; */
     /* font-family: 'EB Garamond', serif; */
     font-family: 'Roboto', sans-serif;
-
     line-height: 3rem;
     list-style: none;
     padding-bottom: 5px;
+    margin:0;
 }
 
 
@@ -29,6 +29,7 @@
     justify-content: center; 
     flex-flow: row wrap;
     font-weight: bold;
+    width:100%;
 }
 
 .nav_item {
@@ -39,6 +40,7 @@
 /* Makes the rest of the page aware of the fixed position navbar */
 #nav-spacer {
     height: 5rem;
+    margin:0;
 }
 
 
