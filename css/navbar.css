@@ -12,11 +12,7 @@
     padding-bottom: 5px;
 }
 
-@media (max-width: 720px) {
-    #nav_container {
-        font-size: 1.5rem; 
-    }     
-  }
+
 
  /* External Layout */
 #nav_container {
