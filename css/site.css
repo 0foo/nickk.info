@@ -65,6 +65,9 @@ img {
   body {
     font-size: 1rem;
   }
+  code {
+     font-size: 1rem !important;
+  }
   #nav_container {
       font-size: 130% !important; 
   }     
