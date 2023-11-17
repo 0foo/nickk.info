@@ -63,13 +63,13 @@ img {
 
  @media (max-width: 720px) {
   body {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   #nav_container {
-      font-size: 1.5rem !important; 
+      font-size: 130% !important; 
   }     
   .article-title {
-    font-size: 1.5rem !important; 
+    font-size: 130% !important; 
   }   
 }
 
