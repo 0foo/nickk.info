@@ -40,7 +40,7 @@
 
 /* Makes the rest of the page aware of the fixed position navbar */
 #nav-spacer {
-    height: 5rem;
+    height: 3rem;
     margin:0;
 }
 
