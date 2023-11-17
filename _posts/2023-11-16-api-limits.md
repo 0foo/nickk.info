@@ -5,7 +5,7 @@ tags: networking
 layout: article
 ---
 
-( Note: this is purely for experimentation and learning. Sites rate limit specifically to avoid data collection, becaue their data is propietary and core to their business. Additionally, on some smaller sites boundless scraping can DDOS the site or cause expensive resource usage. Please respect a web site's wishes.)
+( Note: this is purely for experimentation and learning. Sites rate limit specifically to avoid data collection, becaue their data is propietary and core to their business. Additionally, on smaller sites boundless scraping can DDOS the site or cause expensive resource utilization. Please respect a web site's boundaries. )
 
 Most websites have API request limits __based on IP__ which make scraping or bulk data collection on their sites prohibitive.
 
