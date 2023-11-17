@@ -66,10 +66,10 @@ img {
     font-size: 1.1rem;
   }
   #nav_container {
-      font-size: 1.1rem; 
+      font-size: 1.5rem !important; 
   }     
   .article-title {
-    font-size: 1.3rem; 
+    font-size: 1.5rem !important; 
   }   
 }
 
