@@ -68,7 +68,7 @@
 
         <div class="article-content-section article-summary">
             
-                <p><em>( Note: this is purely for experimentation and learning. Sites rate limit specifically to avoid data collection, becaue their data is propietary and core to their business. Additionally, on smaller sites especially, boundless scraping can DDOS the site or cause expensive resource utilization. Please respect a web site’s rate limits. )</em>
+                <p><em>( Note: this post is purely for experimentation and learning purposes. Sites rate limit specifically to avoid data collection, becaue their data is propietary and core to their business. Additionally, on smaller sites especially, boundless scraping can DDOS the site or cause expensive resource utilization. Please respect a web site’s wishes. )</em>
 <br /></p>
 
 <p>Most websites have API request limits <strong>based on IP</strong> which make scraping or bulk data collection on their sites prohibitive.</p>
@@ -83,8 +83,6 @@
 
 <p>IPRoyal claims to have a network of 8 million residential IP’s!!!</p>
 
-<p>If this is true and if this works this is extremely awesome.</p>
-
 <p>I signed up for IPRoyal and forked over the 7 bucks to see what happens.</p>
 
 <!--more-->
@@ -95,14 +93,14 @@
 
 <p>As everyone knows, 200 status code is a successful request and 429 status code is a blocked reqest due to rate limit.</p>
 
-<p>Let’s see if we can get blocked by reddit.</p>
+<p>Let’s see if we will get blocked by reddit.</p>
 
 <p>(Note: These are async responses, so the responses are unordered. Had to async these for speed. )</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nick@nick-XPS-9315:~<span class="nv">$ </span><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..1000<span class="o">}</span><span class="p">;</span> <span class="k">do</span> /bin/bash <span class="nt">-c</span> <span class="s1">'curl  -sL -o /dev/null -w "%{http_code} " https://www.reddit.com &amp;'</span><span class="p">;</span> <span class="k">done</span><span class="p">;</span>
 nick@nick-XPS-9315:~<span class="nv">$ </span>429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 200 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 200 429 429 429 429 429 429 429 429 429 429 429 429 429 429 200 429 429 200 429 200 200 429 200 200 200 429 200 429 429 200 429 200 200 200 429 429 200 429 200 200 200 429....
 </code></pre></div></div>
 
-<p>Rate limited almost immediately LOL!</p>
+<p>Rate limited almost immediately lol.</p>
 
 <hr class="article-separator-more" />
 
@@ -120,9 +118,8 @@ nick@nick-XPS-9315:~<span class="nv">$ </span>200 200 200 200 200 200 200 200 20
 </code></pre></div></div>
 
 <p><br />
-Not a single 429!!<br />
-Now that’s cooking with GAS!!! <br />
-IPRoyal is pretty pretty cool.<br />
+Not a single 429!! <br />
+IPRoyal is working as advertised.<br />
 In the next post we’re going to combine this with some sort of scraper or web spider to try and scrape all of the comment’s of a Reddit user.</p>
 
 

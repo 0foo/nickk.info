@@ -5,7 +5,7 @@ tags: networking
 layout: article
 ---
 
-*( Note: this is purely for experimentation and learning. Sites rate limit specifically to avoid data collection, becaue their data is propietary and core to their business. Additionally, on smaller sites especially, boundless scraping can DDOS the site or cause expensive resource utilization. Please respect a web site's rate limits. )*
+*( Note: this post is purely for experimentation and learning purposes. Sites rate limit specifically to avoid data collection, becaue their data is propietary and core to their business. Additionally, on smaller sites especially, boundless scraping can DDOS the site or cause expensive resource utilization. Please respect a web site's wishes. )*
 <br/>
 
 Most websites have API request limits __based on IP__ which make scraping or bulk data collection on their sites prohibitive.
@@ -20,8 +20,6 @@ I found one of these IP providers called IPRoyal.
 
 IPRoyal claims to have a network of 8 million residential IP's!!! 
 
-If this is true and if this works this is extremely awesome. 
-
 I signed up for IPRoyal and forked over the 7 bucks to see what happens.
 
 <!--more-->
@@ -33,7 +31,7 @@ To begin, let's run a non-proxied reddit.com query with a curl statment to see h
 
 As everyone knows, 200 status code is a successful request and 429 status code is a blocked reqest due to rate limit. 
 
-Let's see if we can get blocked by reddit.
+Let's see if we will get blocked by reddit.
 
 (Note: These are async responses, so the responses are unordered. Had to async these for speed. )
 ```bash
@@ -42,7 +40,7 @@ nick@nick-XPS-9315:~$ 429 429 429 429 429 429 429 429 429 429 429 429 429 429 42
 ```
 
 
-Rate limited almost immediately LOL! 
+Rate limited almost immediately lol.
 
 <hr class="article-separator-more"/>
 
@@ -64,9 +62,8 @@ nick@nick-XPS-9315:~$ 200 200 200 200 200 200 200 200 200 200 200 200 200 200 20
 ```
 
 <br/>
-Not a single 429!!  
-Now that's cooking with GAS!!!   
-IPRoyal is pretty pretty cool.  
+Not a single 429!!   
+IPRoyal is working as advertised.  
 In the next post we're going to combine this with some sort of scraper or web spider to try and scrape all of the comment's of a Reddit user.
 
 
