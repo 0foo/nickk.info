@@ -27,7 +27,8 @@
     display: flex; 
     align-content:  center; 
     justify-content: center; 
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
+    /* flex-shrink: 2; */
     font-weight: bold;
     width:100%;
 }
