@@ -71,5 +71,10 @@ img {
   .article-title {
     font-size: 130% !important; 
   }   
+
+  .nav_item {
+    padding-right: .4rem !important;
+    /* border: solid 1px blue; */
+}
 }
 
