@@ -67,6 +67,7 @@ img {
  @media (max-width: 720px) {
   body {
     font-size: 1rem;
+    width:100%;
   }
   code {
      font-size: 1rem !important;
