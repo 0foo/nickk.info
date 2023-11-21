@@ -92,4 +92,4 @@
     .article-image { flex: 0%; margin:0; padding:0;}
   } */
   .article-content { flex: 100%;}
-  .article-image { flex: 0%; margin:0; padding:0;}
+  .article-image { flex: 0%; margin:0; padding:0; display:none;}
