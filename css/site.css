@@ -60,13 +60,13 @@ img {
 }
 
  @media (max-width: 720px) {
-  /* html{
-    width:100% !important;
+  html{
+    /* width:100% !important; */
   }
   body {
     font-size: 1rem;
-    width:100% !important;
-  } */
+    /* width:100% !important; */
+  }
   code {
      font-size: 1rem !important;
   }
