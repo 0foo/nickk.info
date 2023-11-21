@@ -22,7 +22,7 @@ pre {
   overflow: auto;
   /* display: block; */
   /* width: fit-content; */
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
 }
 
 
