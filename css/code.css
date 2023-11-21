@@ -20,7 +20,7 @@ pre {
   /* -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0); */
   overflow: auto;
-  display: block;
+  /* display: block; */
   /* width: fit-content; */
   box-sizing: content-box;
 }
