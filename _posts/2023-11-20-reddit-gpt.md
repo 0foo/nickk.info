@@ -153,6 +153,4 @@ These fields collectively provide a structured view of each comment, its context
 ```
 
 
-Chat GPT is WILD!!!
-
-The most interesting aspect in my opinion is the ability to recognize fields once prompted with zero assistance and learn about them for future actions.
+The most interesting aspect in my opinion is the ability to recognize fields once prompted with zero assistance and learn about them for future actions. 
