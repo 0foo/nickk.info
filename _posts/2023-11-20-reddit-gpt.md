@@ -9,7 +9,8 @@ I wrote a reddit comment scraper and then uploaded the results of the user comme
 
 
 * Code/Files in this experiment:
-
+    * [https://github.com/0foo/reddit_comment_scraper/tree/master](https://github.com/0foo/reddit_comment_scraper/tree/master)
+    * [https://github.com/0foo/reddit_comment_scraper/blob/master/data/spez.txt](file)
 
 <br/>
 
