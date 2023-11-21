@@ -30,6 +30,7 @@ a {
 	text-decoration: none;
 	color: black;
   overflow: auto;
+  display:inline;
 }
 
 hr {
