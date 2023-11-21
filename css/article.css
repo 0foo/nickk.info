@@ -1,13 +1,9 @@
 .article {
     display: flex;
     margin: 2rem 0rem 2rem 0;
+    width:100%;
 }
 
-.article-image {
-    flex: 10%;
-    flex-shrink: 0;
-    margin-right: 1em;
-}
 
 
 .article-content {
