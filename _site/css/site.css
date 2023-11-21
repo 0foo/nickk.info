@@ -31,6 +31,7 @@ a {
 	color: black;
   overflow: auto;
   display:inline;
+  overflow-wrap: break-word;
 }
 
 hr {
