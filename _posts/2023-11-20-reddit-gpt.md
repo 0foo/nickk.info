@@ -19,7 +19,7 @@ I wrote a reddit comment scraper and then uploaded the results of the user comme
 
 ```
 (uploaded file spez.txt)
-Me: lease analyze this file and give me a summary of the person.
+Me: Please analyze this file and give me a summary of the person.
 ```
 
 <!--more-->
