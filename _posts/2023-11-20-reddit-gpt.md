@@ -15,7 +15,7 @@ I wrote a reddit comment scraper and then uploaded the results of the user comme
 <br/>
 
 
-<u> Chating with GPT </u>
+<u> Chatting with GPT </u>
 
 ```
 (uploaded file spez.txt)
