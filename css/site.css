@@ -69,11 +69,12 @@ img {
     width:100% !important; 
   }
   code {
-     font-size: 85% !important;
+     font-size: 1rem% !important;
   } 
   #nav_container {
-      font-size: 85% !important; 
+      font-size: 1rem !important; 
   }  
+
   .article-title   {
     font-size: 1rem !important; 
   }
