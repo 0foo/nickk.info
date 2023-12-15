@@ -53,8 +53,6 @@ img {
     margin: auto;
     padding:0 3% 0 3%;
 }
-
-
  strong{
   font-weight: bolder;
  }
@@ -62,27 +60,32 @@ img {
   font-style: italic; 
 }
 
- @media (max-width: 720px) {
-  html{
-    /* width:100% !important; */
-  }
+
+/* @media (min-width: 720px) {
+
+
+
+}
+
+@media (min-width: 320px) {
+
   body {
-    font-size: 1rem;
+    font-size: 90%rem;
     /* width:100% !important; */
-  }
+  /* }
   code {
-     font-size: 1rem !important;
+     font-size: 90%;
   }
   #nav_container {
-      font-size: 130% !important; 
+      font-size: .8rem; 
   }     
   .article-title {
-    font-size: 130% !important; 
+    font-size: 130%; 
   }   
 
   .nav_item {
-    padding-right: .6rem !important;
+    padding-right: .6rem;
     /* border: solid 1px blue; */
 }
-}
+} */ */
 
