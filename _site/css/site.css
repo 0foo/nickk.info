@@ -65,7 +65,7 @@ img {
 @media (max-width: 420px) {
 
   body {
-    font-size: 85%rem !important;
+    font-size: 85% !important;
     width:100% !important; 
   }
   code {
@@ -73,7 +73,10 @@ img {
   } 
   #nav_container {
       font-size: 85% !important; 
-  }     
+  }  
+  .article-title   {
+    font-size: 1rem !important; 
+  }
 }
 
 
