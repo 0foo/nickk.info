@@ -61,31 +61,19 @@ img {
 }
 
 
-/* @media (min-width: 720px) {
 
-
-
-}
-
-@media (min-width: 320px) {
+@media (max-width: 420px) {
 
   body {
-    font-size: 90%rem;
-    /* width:100% !important; */
-  /* }
-  code {
-     font-size: 90%;
+    font-size: 85%rem !important;
+    width:100% !important; 
   }
+  code {
+     font-size: 85% !important;
+  } 
   #nav_container {
-      font-size: .8rem; 
+      font-size: 85% !important; 
   }     
-  .article-title {
-    font-size: 130%; 
-  }   
-
-  .nav_item {
-    padding-right: .6rem;
-    /* border: solid 1px blue; */
 }
-} */ */
+
 
