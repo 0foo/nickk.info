@@ -2,13 +2,13 @@
 #nav_container {
     background-color: var(--main-bg-color);
     border-bottom: solid 1px black;
-    font-size: 120%;
+    font-size: 1.7rem;
     /* font-family:  'Inconsolata', monospace; */
     /* font-family: 'EB Garamond', serif; */
     font-family: 'Roboto', sans-serif;
-    padding-top: 5px;
+    padding-top: 15px;
     list-style: none;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     margin:0;
 }
 
