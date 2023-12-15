@@ -2,7 +2,7 @@
 #nav_container {
     background-color: var(--main-bg-color);
     border-bottom: solid 1px black;
-    font-size: 1.9rem;
+    font-size: 120%;
     /* font-family:  'Inconsolata', monospace; */
     /* font-family: 'EB Garamond', serif; */
     font-family: 'Roboto', sans-serif;
