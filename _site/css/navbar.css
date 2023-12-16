@@ -42,6 +42,8 @@
 #nav-spacer {
     height: 2.5rem;
     margin:0;
+    z-index: 99;
+    border:solid 1px red;
 }
 
 
