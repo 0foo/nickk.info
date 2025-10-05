@@ -1,0 +1,4 @@
+src/
+.till
+node_modules/
+*.sh

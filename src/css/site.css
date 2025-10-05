@@ -24,6 +24,7 @@ body {
   line-height: 1.7;
   font-family: 'Roboto', sans-serif;
   color: var(--font-color);
+  margin:auto;
 }
 
 a {
@@ -51,7 +52,7 @@ img {
 #content-wrapper {
     /* width: 100%; */
     margin: auto;
-    padding:0 3% 0 3%;
+    padding:0 10% 0 10%;
 }
  strong{
   font-weight: bolder;

@@ -66,3 +66,10 @@ excerpt_separator: "<!--more-->"  #global excerpt separator for the blog posts
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+# _config.yml
+exclude:
+  - node_modules
+  - src
+  - .till
+  - build
+  - scripts
