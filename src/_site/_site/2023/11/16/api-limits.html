@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+
+
+<!-- Use the title from a page's frontmatter if it has one -->
+<title>nickk.info</title>
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/code.css">
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/article.css">
+
+<!-- Matomo -->
+<script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://0foodev.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src='//cdn.matomo.cloud/0foodev.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+
+<body>
+  
+  <ul id="nav_container">
+    <li class="nav_item" id="nav-site-name">
+      <a href="/">Home</a>
+    </li> 
+    <li class="nav_item nav_spacer">|</li>
+    <li class="nav_item"><a href="">Archives</a></li> 
+    <li class="nav_item nav_spacer">|</li>
+    <li class="nav_item"><a href="/pages/about">About</a></li> 
+    <li class="nav_item nav_spacer">|</li>
+    <li class="nav_item"><a href="https://nickkiermaier.com">Resume</a></li>	
+</ul> 
+<div id="nav-spacer"></div>
+
+
+<div id="content-wrapper">
+      
+
+<article class="article">
+
+    <div class="article-content">
+       
+        <div class="article-content-section article-title">
+            <a  href="/2023/11/16/api-limits.html">Working around API request limits with bulk IP proxy</a>
+        </div>
+
+        <div class="article-content-section article-summary">
+            
+                <p><em>( Note: this post is purely for experimentation and learning purposes. Sites have rate limits specifically to avoid data collection, because their data is propietary and core to their business. Additionally, on smaller sites especially, excessive scraping can DDOS the site and cause expensive resource utilization. Please respect a web site’s wishes. )</em>
+<br /><br /></p>
+
+<p>Most websites have API request limits <strong>based on IP</strong> which make scraping or bulk data collection on their sites prohibitive.</p>
+
+<p>Scraping and data collection requires a LOT of requests for each new page of data which would be rather quickly rate limited, slowing down your data collection to unsatisfactory speeds.</p>
+
+<p>So what’s the solution?  Send each request through a unique IP!</p>
+
+<p>There exists companies which specialize in Bulk IP proxying, and have bulk amounts of IP’s, which, for a small fee, will let you proxy all of your requests through their network which, if all goes well, should give you unique IP per request goodness.</p>
+
+<p>I found one of these IP providers called IPRoyal.</p>
+
+<p>IPRoyal claims to have a network of 8 million residential IP’s!!!</p>
+
+<p>I signed up for IPRoyal and forked over the 7 bucks to see what happens.</p>
+
+<!--more-->
+
+<hr class="article-separator-more" />
+
+<p>To begin, let’s run a non-proxied reddit.com query with a curl statment to see how quickly we get rate limited.</p>
+
+<p>As everyone knows, 200 status code is a successful request and 429 status code is a blocked reqest due to rate limit.</p>
+
+<p>Let’s see if we will get blocked by reddit.</p>
+
+<p>(Note: These are async responses, so the responses are unordered. Had to async these for speed. )</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nick@nick-XPS-9315:~<span class="nv">$ </span><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..1000<span class="o">}</span><span class="p">;</span> <span class="k">do</span> /bin/bash <span class="nt">-c</span> <span class="s1">'curl  -sL -o /dev/null -w "%{http_code} " https://www.reddit.com &amp;'</span><span class="p">;</span> <span class="k">done</span><span class="p">;</span>
+nick@nick-XPS-9315:~<span class="nv">$ </span>429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 200 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 429 200 429 429 429 429 429 429 429 429 429 429 429 429 429 429 200 429 429 200 429 200 200 429 200 200 200 429 200 429 429 200 429 200 200 200 429 429 200 429 200 200 200 429....
+</code></pre></div></div>
+
+<p>Rate limited almost immediately lol.</p>
+
+<hr class="article-separator-more" />
+
+<p>So let’s try with the IPRoyal network.</p>
+
+<p>So, for 7 bucks IPRoyal gives you 1gig worth of data.</p>
+
+<p>To use their network you are provided with a hash/url combo which you can configure as a proxy via proxy application or combine for curl.</p>
+
+<p>Now let’s try with the IPRoyal proxy. :) (-x being the curl proxy flag)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">IPRoyalProxy</span><span class="o">=</span><span class="s2">"http://&lt;someBigHash&gt;@geo.iproyal.com:12321"</span>
+nick@nick-XPS-9315:~<span class="nv">$ </span><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..1000<span class="o">}</span><span class="p">;</span> <span class="k">do</span> /bin/bash <span class="nt">-c</span> <span class="s2">"curl  -s -o /dev/null -w </span><span class="se">\"</span><span class="s2">%{http_code} </span><span class="se">\"</span><span class="s2"> -I -x </span><span class="nv">$IPRoyalProxy</span><span class="s2"> -L https://www.reddit.com &amp;"</span><span class="p">;</span> <span class="k">done</span><span class="p">;</span>
+nick@nick-XPS-9315:~<span class="nv">$ </span>200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 000 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 .....
+</code></pre></div></div>
+
+<p><br />
+Not a single 429!! <br />
+IPRoyal is working as advertised.<br />
+In the next post we’re going to combine this with some sort of scraper or web spider to try and scrape all of the comment’s of a Reddit user.</p>
+
+
+            
+  
+        </div>
+        
+    </div>
+  </article>
+  
+
+
+
+  
+</div>
+
+
+<footer>
+</footer>
+
+
+</body>
+</html> 
