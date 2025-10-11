@@ -1,21 +1,22 @@
 <article class="article">
   <div class="article-content">
     <div class="article-content-section article-title">
-      <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+      <a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a>
     </div>
 
     <div class="article-content-section article-summary">
       {% if include.is_excerpt %}
-        {{ page.excerpt }}
+        {{ include.item.excerpt }}
       {% else %}
-        {{ page.content }}
+        {{ include.item.content }}
       {% endif %}
     </div>
 
     {% if include.is_excerpt %}
     <div class="article-content-section article-read-more">
-      <a href="{{ page.url | relative_url }}"> - Read more - </a>
+      <a href="{{ include.item.url | relative_url }}"> - Read more - </a>
     </div>
     {% endif %}
   </div>
 </article>
+

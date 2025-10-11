@@ -17,7 +17,7 @@
 
         <!-- This loops through the paginated posts -->
         {% for page in paginator.posts %}
-          {% include summary.html is_excerpt="true" %}
+          {% include summary.html item=post is_excerpt="true" %}
           <hr class="article-separator"/>
         {% endfor %}
         
