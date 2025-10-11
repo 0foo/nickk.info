@@ -1,9 +1,3 @@
-PATH
-  remote: ../jekyll-theme-nickk
-  specs:
-    jekyll-theme-nickk (0.1.0)
-      jekyll (~> 4.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -101,11 +95,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll (~> 4.4)
+  http_parser.rb (~> 0.6.0)
+  jekyll (~> 4.3)
   jekyll-compose
   jekyll-feed
   jekyll-paginate
-  jekyll-theme-nickk!
+  tzinfo (>= 1, < 3)
+  tzinfo-data
+  wdm (~> 0.1.1)
   webrick (~> 1.8)
 
 BUNDLED WITH

@@ -1,0 +1,86 @@
+.article {
+  display: flex;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.article-content {
+  flex: 1 1 80%;
+  min-width: 0;            /* allow shrinking in flex */
+}
+
+.article-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 2rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.article-title a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.article-content-section { /* reserved hook */ }
+
+.article-read-more {
+  margin-top: 2rem;
+}
+
+.article-read-more > a {
+  border: 2px solid black;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 0;
+  color: black;
+  text-decoration: none;
+}
+
+.article-read-more > a:focus,
+.article-read-more > a:hover {
+  text-decoration: underline;
+}
+
+.article-separator,
+.article-separator-more {
+  border: none;
+  background-color: #c49991;
+}
+
+.article-separator {
+  height: 2px;
+  border-radius: 5px;
+}
+
+.article-separator-more {
+  height: 1px;
+  margin: 20px 0;
+}
+
+/* Hide the last HR inside the list column */
+#col1 .article-separator:last-of-type {
+  display: none;
+}
+
+#article-content {
+  padding: 0 5%;
+}
+
+/* Code blocks */
+.highlighter-rouge {
+  width: 100%;
+  overflow: auto;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #000;
+}
+
+/* Mobile: stack and remove image column */
+@media (max-width: 720px) {
+  .article { display: block; }
+  .article-content { flex: 1 1 auto; }
+  .article-image { display: none; margin: 0; padding: 0; }
+}
