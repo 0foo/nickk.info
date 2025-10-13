@@ -575,6 +575,41 @@ pre.highlight {
     --color-muted: #a5a5a5;
   }
 }
+/* Taller navbar on mobile */
+@media (max-width: 600px) {
+  /* Bump the nav sizing tokens */
+  :root {
+    --nav-height: 64px; /* was ~2.5rem; give thumbs 44px+ tap area */
+    --nav-font-size: 1.25rem;
+  }
+  /* Make the bar itself taller */
+  #nav_container {
+    height: var(--nav-height);
+    align-items: center; /* center items vertically */
+    padding-block: 0; /* height is controlled by the token */
+  }
+  /* Ensure the spacer matches the nav height */
+  #nav-spacer {
+    height: var(--nav-height);
+  }
+  /* Make link tap targets comfy */
+  #nav_container .nav_item a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    padding-block: 0.75rem; /* extra vertical padding inside the taller bar */
+    font-size: var(--nav-font-size);
+  }
+  /* Optional: tweak icon size if you have image buttons in the nav */
+  .nav-img-wrapper img {
+    height: 28px; /* adjust to taste */
+    width: auto;
+  }
+  /* Optional: give the '|' spacers some breathing room */
+  .nav_spacer {
+    padding-inline: 0.4rem;
+  }
+}
 /* _sass/0foo/_navbar.scss
    Drop-in navbar styles. Uses CSS variables; falls back if unset.
    Markup example:

@@ -1,18 +1,16 @@
 <!-- Pagination links -->
-<div class="pagination">
-    
-    {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="previous"><< Previous</a>
-    {% else %}
-        <span class="previous">Previous</span>
-    {% endif %}
+<nav class="pagination" role="navigation" aria-label="Pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="previous" rel="prev">&laquo; Previous</a>
+  {% else %}
+    <span class="previous" aria-disabled="true">Previous</span>
+  {% endif %}
 
-    <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
-    
-    {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">Next >></a>
-    {% else %}
-        <span class="next ">Next </span>
-    {% endif %}
+  <span class="page_number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
 
-</div> 
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" class="next" rel="next">Next &raquo;</a>
+  {% else %}
+    <span class="next" aria-disabled="true">Next</span>
+  {% endif %}
+</nav>
