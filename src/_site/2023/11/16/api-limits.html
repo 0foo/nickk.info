@@ -8,14 +8,39 @@
 
 <link rel="stylesheet" href="/nickk.info/assets/theme.css">
 </head>
-  <body><script src="https://unpkg.com/pixi.js@7.2.4/dist/pixi.min.js" defer></script>
+  <body>
+  <script>
+    const isMobile = () =>
+      window.matchMedia("(max-width: 768px)").matches ||
+      window.matchMedia("(pointer: coarse)").matches;
 
-    <script src="/nickk.info/assets/js/pixi-bird-overlay.js" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        PixiBirdOverlay.init(); // or PixiBirdOverlay.init({ canvasId: 'my-canvas' })
-      });
-    </script>
+    const prefersReducedMotion =
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Only load when needed
+    if (!isMobile() && !prefersReducedMotion) {
+      // Load Pixi (optional; overlay will auto-load if missing)
+      const pixi = document.createElement('script');
+      pixi.src = "https://unpkg.com/pixi.js@7.2.4/dist/pixi.min.js";
+      pixi.defer = true;
+      document.head.appendChild(pixi);
+
+      // Load the overlay after Pixi (still fine if Pixi hasn’t finished; overlay auto-loads it)
+      const bird = document.createElement('script');
+      bird.src = "/nickk.info/assets/js/pixi-bird-overlay.js";
+      bird.defer = true;
+      bird.onload = () => {
+        // init when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", () => PixiBirdOverlay.init());
+        } else {
+          PixiBirdOverlay.init();
+        }
+      };
+      document.head.appendChild(bird);
+    }
+   </script>
+
 
     <nav id="site-nav" aria-label="Primary">
   <ul id="nav_container">
