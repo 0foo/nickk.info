@@ -1,0 +1,422 @@
+/* =========================================================
+   Theme CSS — single-knob content width + tidy structure
+   Change only --content-width to resize your content area.
+   ========================================================= */
+
+/* -------- Web fonts (optional; use <link> in HTML for speed) -------- */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap");
+
+/* -------- Design tokens -------- */
+:root {
+  /* Colors */
+  --color-bg:         whitesmoke;
+  --color-text:       #333;  /* body copy */
+  --color-heading:    #111;  /* titles/headings */
+  --color-link:       #222;  /* links */
+  --color-link-hover: #000;  /* link hover */
+  --color-border:     #000;
+  --color-muted:      #666;  /* metadata, timestamps, subtle text */
+
+  /* Typography */
+  --font-body: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-serif: "Roboto Slab", Georgia, "Times New Roman", serif;
+  --font-mono: "Inconsolata", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-size: 1.3rem;  /* base */
+  --line: 1.3;          /* base line-height */
+
+  /* ONE knob to control overall content width */
+  --content-width: 1200px;         /* ← tweak this value */
+
+  /* Derived layout values */
+  --gutter: clamp(12px, 3vw, 48px);   /* side padding that scales with viewport */
+
+  /* Navbar */
+  --nav-height: 2.5rem;
+  --nav-font-size: 1.1rem;
+  --nav-z: 100;
+
+  /* HR styling (shared) */
+  --hr-color: rgba(0,0,0,.18);
+  --hr-thickness: 1px;
+  --hr-width: 100%;
+  --hr-radius: 1px;
+  --hr-mt-base: 1rem;
+  --hr-mb-base: 1rem;
+  --hr-scale: 2;  /* 2x spacing */
+  --hr-mt: calc(var(--hr-mt-base) * var(--hr-scale));
+  --hr-mb: calc(var(--hr-mb-base) * var(--hr-scale));
+
+  /* Back-compat aliases */
+  --main-bg-color: var(--color-bg);
+  --font-color: var(--color-text);
+
+  /* Code */
+  --code-bg: #151515;
+  --code-fg: #d0d0d0;
+  --code-radius: 10px;
+  --code-pad: 0.75rem;
+  --code-font: var(--font-mono);
+  --icode-bg: rgba(21,21,21,.06);
+  --icode-radius: 6px;
+}
+
+/* -------- Base / Normalize-lite -------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: 400 var(--font-size)/var(--line) var(--font-body);
+}
+
+/* Links */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+a:hover { color: var(--color-link-hover); text-decoration: underline; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+
+/* Images */
+img { display: block; max-width: 100%; height: auto; border-radius: 10px; }
+
+/* Emphasis */
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Horizontal rule — short, centered, with shared spacing */
+hr {
+  border: 0;
+  height: var(--hr-thickness);
+  width: var(--hr-width);
+  background: var(--hr-color);
+  border-radius: var(--hr-radius);
+  margin: var(--hr-mt) auto var(--hr-mb);
+}
+@media (prefers-color-scheme: dark){
+  :root { --hr-color: rgba(255,255,255,.22); }
+}
+
+body, .article, .archive { color: var(--color-text); }
+
+/* Common elements explicitly inherit body color (in case earlier rules set their own) */
+h1, h2, h3, h4, h5, h6,
+p, li, blockquote, figcaption,
+.article .meta, .archive-year, .archive-tag, .tag-chip {
+  color: inherit;
+}
+
+/* 2) Make all links look like unhovered archive links */
+a,
+.article .article-title a,
+.archive-link,
+.article a,
+.nav a {
+  color: inherit;                       /* no special link color */
+  text-decoration: underline;           /* always underlined */
+  text-underline-offset: 2px;           /* same offset as archive */
+  text-decoration-thickness: 1.5px;     /* subtle, consistent */
+}
+/* (Optional) If any headings previously forced their own color, neutralize it */
+.article .article-title,
+.article > h1,
+.article h2, .article h3, .article h4 {
+  color: inherit !important;
+}
+
+/* -------- Layout: single, consolidated content wrapper -------- */
+#content-wrapper{
+  max-width: var(--content-width);    /* uses the single knob */
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  padding-top: calc(var(--nav-height) + 0.75rem);
+}
+
+/* Ensure children never exceed the wrapper */
+#content-wrapper > * { max-width: 100%; }
+
+/* -------- Article header & body -------- */
+
+/* Title (works with .article-title OR plain h1 inside .article) */
+.article .article-title,
+.article > h1 {
+  // font-weight: 800;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  margin-top: 0;
+  margin-bottom: var(--hr-mb); /* match HR spacing below */
+  text-align: left;            /* ← left-align title per request */
+  color: var(--color-heading);
+  
+}
+.article .article-title a,
+.article > h1 a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+/* Meta row (date + tags) centered under the title */
+.article .meta {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.85;
+  margin: 0 auto var(--hr-mb);
+  color: var(--color-muted);
+}
+.article .meta .date,
+.article .meta time { font-variant-numeric: tabular-nums; }
+.article .meta .tags { display: inline-flex; gap: 0.4rem; align-items: center; }
+.article .meta .tag {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article .meta .tag:hover { text-decoration-thickness: 2px; }
+
+/* Optional divider under the header (matches HR vars) */
+.article .header-divider {
+  height: var(--hr-thickness);
+  width: var(--hr-width);
+  background: var(--hr-color);
+  border: 0;
+  border-radius: var(--hr-radius);
+  margin: var(--hr-mt) auto var(--hr-mb);
+  opacity: .6;
+}
+
+/* Body typography */
+.article p { margin: 0 0 1.05rem; }
+.article h2,
+.article h3,
+.article h4 {
+  margin: 1.75rem 0 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color: var(--color-heading);
+}
+.article h2 {
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding-bottom: 0.25rem;
+}
+.article h3 { font-size: clamp(1.2rem, 1.5vw, 1.4rem); }
+.article h4 { font-size: clamp(1.05rem, 1.2vw, 1.2rem); }
+
+.article ul,
+.article ol { margin: 0 0 1.1rem 1.25rem; padding: 0; }
+.article li { margin: 0.25rem 0; }
+
+.article blockquote {
+  margin: 1.25rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.04);
+  border-radius: 6px;
+}
+.article blockquote p:last-child { margin-bottom: 0; }
+
+.article figure { margin: 1.25rem auto; text-align: center; }
+.article figcaption { font-size: 0.92rem; opacity: 0.8; margin-top: 0.4rem; }
+
+.article a { text-decoration: underline; text-underline-offset: 2px; }
+.article a:hover { text-decoration-thickness: 2px; }
+
+/* Read more link as bordered chip */
+.article-read-more { margin-top: 1.25rem; }
+.article-read-more > a {
+  display: inline-block;
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #111;
+  border-radius: 8px;
+  color: #111;
+  background: transparent;
+  text-decoration: none;
+  line-height: 1;
+}
+.article-read-more > a:hover,
+.article-read-more > a:focus-visible {
+  background: rgba(0,0,0,.05);
+  outline: none;
+}
+
+/* Force underline on titles (listing + article pages) */
+.article .article-title a,
+.article > h1,
+.article > h1 a {
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+/* -------- Code & Rouge highlighting -------- */
+
+/* Inline code */
+:not(pre) > code,
+code.highlighter-rouge{
+  font-family: var(--code-font);
+  font-size: 0.95em;
+  background: var(--icode-bg);
+  color: inherit;
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--icode-radius);
+  white-space: normal;
+}
+
+/* Block wrapper — clamp to wrapper width; avoid horizontal scroll */
+.highlight{
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border-radius: var(--code-radius);
+  margin: 1rem auto;
+  padding: 0;                     /* pre handles inner padding */
+  max-width: calc(var(--content-width) + 2 * var(--gutter));
+  width: 100%;
+  overflow-x: hidden;             /* hide accidental overflow */
+}
+.highlight pre,
+pre.highlight{
+  margin: 0;
+  padding: var(--code-pad);
+  font-family: var(--code-font);
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;          /* wrap long lines */
+  word-break: break-word;
+}
+
+/* Rouge line-numbers table variant */
+.highlight table{ border-collapse: collapse; width: 100%; }
+.highlight td{ padding: 0; vertical-align: top; }
+.highlight td.gutter{
+  user-select: none;
+  padding: var(--code-pad) 0 var(--code-pad) var(--code-pad);
+  opacity: .65;
+  text-align: right;
+  white-space: nowrap;
+}
+.highlight td.code{ width: 100%; padding-right: var(--code-pad); }
+.highlight td.gutter pre,
+.highlight td.code pre { margin: 0; padding: 0; }
+
+/* Token colors (original palette) */
+.highlight, .highlight .w { color:#d0d0d0; background:#151515; }
+.highlight .err{color:#151515;background:#ac4142;}
+.highlight .c,.highlight .ch,.highlight .cd,.highlight .cm,.highlight .cpf,.highlight .c1,.highlight .cs{color:#505050;}
+.highlight .cp,.highlight .nt{color:#f4bf75;}
+.highlight .o,.highlight .ow,.highlight .p,.highlight .pi{color:#d0d0d0;}
+.highlight .gi{color:#90a959;}
+.highlight .gd{color:#ac4142;}
+.highlight .gh{color:#6a9fb5;background:#151515;font-weight:bold;}
+.highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv{color:#aa759f;}
+.highlight .kc,.highlight .kt,.highlight .kd{color:#d28445;}
+.highlight .s,.highlight .sb,.highlight .sc,.highlight .dl,.highlight .sd,.highlight .s2,.highlight .sh,.highlight .sx,.highlight .s1{color:#90a959;}
+.highlight .sa{color:#aa759f;}
+.highlight .sr{color:#75b5aa;}
+.highlight .si,.highlight .se{color:#8f5536;}
+.highlight .nn,.highlight .nc,.highlight .no{color:#f4bf75;}
+.highlight .na{color:#6a9fb5;}
+.highlight .m,.highlight .mb,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .il,.highlight .mo,.highlight .mx{color:#90a959;}
+.highlight .ss{color:#90a959;}
+
+/* -------- Responsive tweaks -------- */
+@media (max-width: 480px){
+  :root { --nav-font-size: 1rem; }
+  .highlight pre, pre.highlight { font-size: .95rem; }
+}
+
+/* -------- Dark scheme base -------- */
+@media (prefers-color-scheme: dark){
+  :root{
+    --color-bg:   #111;
+    --color-text: #d8d8d8;
+    --color-link: #f0f0f0;
+    --color-link-hover: #ffffff;
+    --color-border: #333;
+    --color-heading: #ffffff;
+    --color-muted:  #a5a5a5;
+  }
+}
+
+
+
+// /* ================================
+//    Make post pages match Archives
+//    ================================ */
+
+// /* 1) Same narrow reading width as Archives */
+// .article {
+//   max-width: var(--content-max, 70ch);
+//   margin: 0 auto;
+//   padding: 0 var(--content-pad, 1rem);
+//   font-family: var(--font-body);
+//   font-weight: 400;
+//   font-size: var(--font-size);
+//   line-height: var(--line);
+// }
+
+// /* 2) Title: use Archives-like scale + tone (subtle) */
+// .article .article-title,
+// .article > h1 {
+//   font-weight: 500;                 /* calmer than 700/800 */
+//   font-size: 1.6rem;                /* matches .archive-year scale */
+//   line-height: 1.25;
+//   letter-spacing: 0;
+//   margin: 2rem 0 0.75rem;           /* mirrors .archive-year spacing */
+//   color: var(--color-heading, #111);
+//   text-align: left;                 /* like Archives */
+//   text-decoration: none;            /* base element is plain */
+// }
+
+// /* 3) Title link styling identical to archive links */
+// .article .article-title a,
+// .article > h1 a {
+//   color: inherit;
+//   text-decoration: underline;
+//   text-underline-offset: 2px;
+//   text-decoration-thickness: 1.5px;
+// }
+
+// /* 4) In-article links: same look as Archives */
+// .article a {
+//   color: inherit;
+//   text-decoration: underline;
+//   text-underline-offset: 2px;
+//   text-decoration-thickness: 1.5px;
+// }
+
+// /* 5) Meta row: quieter, left-aligned like list context */
+// .article .meta {
+//   display: block;
+//   margin: 0 0 1rem;
+//   font-size: 0.95rem;
+//   color: var(--color-muted, #666);
+//   opacity: .85;
+//   text-align: left;
+// }
+// .article .meta .date,
+// .article .meta time { font-variant-numeric: tabular-nums; }
+
+// /* 6) Optional: unify underline weight everywhere */
+// .archive .archive-link {
+//   text-decoration: underline;
+//   text-underline-offset: 2px;
+//   text-decoration-thickness: 1.5px;
+// }
+
+// /* 7) (Optional but recommended) ensure real 500 weight is loaded */
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");

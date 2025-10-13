@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  {% include header.html %}
-</head>
-<body>
-
-    TEST TEST
-  <main id="content-wrapper">
-
-  </main>
-</body>
+  <head>{% include header.html %}</head>
+  <body>
+    {% include navbar.html %}
+    <div id="content-wrapper">
+      {{ content }}
+    </div>
+    <footer></footer>
+  </body>
 </html>
+
+

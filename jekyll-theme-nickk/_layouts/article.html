@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="article">
+  <h1 class="article-title">{{ page.title }}</h1>
+
+  <div class="article-content-section">
+    {{ content }}
+  </div>
+  <hr class="header-divider">
+  <p class="meta">
+    <time class="date" datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: "%Y-%m-%d" }}
+    </time>
+    {% if page.tags %}
+    <span class="tags">
+      {% for t in page.tags %}
+      <a class="tag" href="{{ '/tags/' | append: t | relative_url }}">#{{ t }}</a>
+      {% endfor %}
+    </span>
+    {% endif %}
+  </p>
+</article>

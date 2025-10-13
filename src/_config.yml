@@ -8,3 +8,10 @@ paginate: 5
 plugins:
   - jekyll-paginate
   - jekyll-feed
+
+# Apply default layout to everything
+defaults:
+  - scope:
+      path: ""        # whole site
+    values:
+      layout: home # uses _layouts/default.html (from your site or theme)

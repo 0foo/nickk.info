@@ -1,0 +1,97 @@
+---
+layout: default
+title: Archives
+---
+
+<div class="archive">
+
+  <!-- =======================
+       Posts grouped by YEAR
+  ======================== -->
+  {% assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" | sort: "name" | reverse %}
+  {% for year in years %}
+    <h2 class="archive-year" id="year-{{ year.name }}">{{ year.name }}</h2>
+    <ul class="archive-list">
+      {% assign posts_in_year = year.items | sort: "date" | reverse %}
+      {% for post in posts_in_year %}
+        <li class="archive-item">
+          <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: '%b %d' }}
+          </time>
+          <a class="archive-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+
+          {% if post.tags and post.tags != empty %}
+          <span class="archive-tags">
+            {% for t in post.tags %}
+              {% assign slug = t | slugify %}
+              <a class="archive-tag" href="#tag-{{ slug }}">{{ t }}</a>
+            {% endfor %}
+          </span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+  <!-- =======================
+       TAGS index (all tags)
+       Links above point here
+  ======================== -->
+  {% assign tag_names = site.posts | map: "tags" | join: "," | split: "," | uniq | sort_natural %}
+  {% comment %}
+    The join/split trick flattens the array-of-arrays of tags.
+    We also guard against empty strings below.
+  {% endcomment %}
+
+  <h2 class="archive-tags-title">Tags</h2>
+  <div class="archive-tags-cloud">
+    {% for tag in tag_names %}
+      {% unless tag == "" %}
+        <a class="tag-chip" href="#tag-{{ tag | slugify }}">{{ tag }}</a>
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  {% for tag in tag_names %}
+    {% unless tag == "" %}
+      {% assign slug = tag | slugify %}
+      {% assign posts_with_tag = site.posts | where_exp: "p", "p.tags contains tag" | sort: "date" | reverse %}
+      <h3 class="archive-tag-section" id="tag-{{ slug }}">#{{ tag }}</h3>
+      <ul class="archive-list">
+        {% for post in posts_with_tag %}
+          <li class="archive-item">
+            <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: '%Y-%b %d' }}
+            </time>
+            <a class="archive-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endunless %}
+  {% endfor %}
+
+</div>
+
+<style>
+/* Minimal, tweak to taste or move into your theme CSS */
+.archive { max-width: var(--content-max, 70ch); margin: 0 auto; padding: 0 var(--content-pad, 1rem); }
+.archive-year { margin: 2rem 0 0.75rem; font-size: 1.6rem; border-bottom: 1px solid rgba(0,0,0,.1); padding-bottom: .25rem; }
+.archive-list { list-style: none; margin: 0 0 1rem; padding: 0; }
+.archive-item { display: flex; gap: .75rem; align-items: baseline; padding: .25rem 0; flex-wrap: wrap; }
+.archive-date { font-variant-numeric: tabular-nums; opacity: .7; min-width: 5.2rem; display: inline-block; }
+.archive-link { text-decoration: underline; text-underline-offset: 2px; color: inherit; }
+.archive-tags { display: inline-flex; gap: .35rem; }
+.archive-tag { font-size: .85em; padding: .05rem .45rem; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; text-decoration: none; color: inherit; }
+.archive-tag:hover { text-decoration: underline; }
+
+.archive-tags-title { margin: 2.5rem 0 .75rem; font-size: 1.4rem; }
+.archive-tags-cloud { display: flex; flex-wrap: wrap; gap: .4rem .6rem; margin-bottom: 1.25rem; }
+.tag-chip { font-size: .9rem; padding: .15rem .6rem; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; text-decoration: none; color: inherit; }
+.tag-chip:hover { text-decoration: underline; }
+
+.archive-tag-section { margin: 2rem 0 .5rem; font-size: 1.2rem; }
+@media (prefers-color-scheme: dark){
+  .archive-year { border-color: rgba(255,255,255,.18); }
+  .archive-tag, .tag-chip { border-color: rgba(255,255,255,.28); }
+}
+</style>

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div id="column-wrapper">
+  <div id="col1">
+    {% for post in paginator.posts %}
+      {% include summary.html item=post is_excerpt="true" %}
+      <hr class="article-separator"/>
+    {% endfor %}
+    {% include pagination.html %}
+  </div>
+</div>

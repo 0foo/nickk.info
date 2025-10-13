@@ -1,0 +1,133 @@
+/* _sass/0foo/_navbar.scss
+   Drop-in navbar styles. Uses CSS variables; falls back if unset.
+   Markup example:
+     <nav id="nav_container" role="navigation" aria-label="Primary">
+       <a class="nav_item" href="/">Home</a>
+       <a class="nav_item is-active" href="/posts/">Posts</a>
+       <a class="nav_item" href="/about/">About</a>
+       <a class="nav_item" href="https://github.com/0foo">
+         <span class="nav-img-wrapper">
+           <img src="{{ '/assets/img/github.svg' | relative_url }}" alt="GitHub">
+         </span>
+       </a>
+     </nav>
+*/
+
+/* ---------- Defaults (fallbacks if your base sheet doesn't define these) ---------- */
+:root {
+  --nav-bg:         var(--color-bg, whitesmoke);
+  --nav-fg:         var(--color-text, #222);
+  --nav-link:       var(--color-link, #111);
+  --nav-link-hover: var(--color-link-hover, #000);
+  --nav-border:     var(--color-border, #000);
+
+  --nav-font:       var(--font-body, system-ui, -apple-system, "Segoe UI", Arial, sans-serif);
+  --nav-font-size:  1.7rem;
+  --nav-gap:        0.8rem;
+  --nav-pad-y:      0.3rem;
+  --nav-pad-x:      0.5rem;
+  --nav-height:     2.5rem; /* visual target */
+  --nav-z:          100;
+}
+
+/* ---------- Container ---------- */
+#nav_container {
+  position: sticky;        /* pin without layout hacks */
+  top: 0;
+  z-index: var(--nav-z);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center items by default */
+  flex-wrap: wrap;
+  gap: var(--nav-gap);
+
+  background: var(--nav-bg);
+  color: var(--nav-fg);
+  border-bottom: 2px solid var(--nav-border);
+
+  font-family: var(--nav-font);
+  font-size: var(--nav-font-size);
+  font-weight: 700;
+  line-height: 1.2;
+
+  padding: var(--nav-pad-y) var(--nav-pad-x);
+  margin: 0;
+  list-style: none;
+}
+
+/* Alignment modifiers (optional) */
+#nav_container.nav--left  { justify-content: flex-start; }
+#nav_container.nav--right { justify-content: flex-end;   }
+
+/* ---------- Items & Links ---------- */
+.nav_item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem; /* space between icon and text */
+}
+
+#nav_container a,
+.nav_item a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;        /* touch-friendly */
+  color: var(--nav-link);
+  text-decoration: none;
+  border-radius: 6px;             /* subtle hover outline radius */
+}
+
+#nav_container a:hover,
+.nav_item a:hover {
+  color: var(--nav-link-hover);
+  text-decoration: underline;
+}
+
+#nav_container a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Active state helper */
+.nav_item.is-active > a,
+#nav_container a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Icons / Images ---------- */
+.nav-img-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;        /* reserve height to prevent layout shift */
+  flex: 0 0 auto;
+}
+
+.nav-img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 480px) {
+  :root { --nav-font-size: 1rem; }
+  #nav_container { gap: 0.6rem; }
+  #nav_container a { padding: 0.35rem 0.55rem; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ---------- Optional: fixed variant (uncomment to use)
+#nav_container { position: fixed; }
+html { scroll-padding-top: var(--nav-height); }
+body { padding-top: var(--nav-height); }
+---------- */

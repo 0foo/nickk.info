@@ -1,0 +1,26 @@
+<article class="article">
+  <div class="article-content">
+    <div class="article-content-section article-title">
+      <a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a>
+    </div>
+
+    <div class="article-content-section article-summary">
+      {% if include.is_excerpt %}
+        {% assign has_more = include.item.content contains '<!--more-->' %}
+        {% if has_more %}
+          {{ include.item.content | split: '<!--more-->' | first | markdownify }}
+        {% else %}
+          {{ include.item.excerpt | markdownify }}
+        {% endif %}
+      {% else %}
+        {{ include.item.content }}
+      {% endif %}
+    </div>
+
+    {% if include.is_excerpt and (include.item.content contains '<!--more-->') %}
+    <div class="article-content-section article-read-more">
+      <a href="{{ include.item.url | relative_url }}">- Read more -</a>
+    </div>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,236 @@
+/* ----------------------------------------
+   Code & Syntax Highlighting (Rouge)
+   - Keeps your original palette
+   - Fixes wrapping (scroll horizontally)
+   - Supports Rouge line-numbers table layout
+   - Adds inline code styling
+   - Clamps blocks to the page/content width
+----------------------------------------- */
+
+/* Tokens (adjust as you like) */
+:root {
+  --code-bg:      #151515;
+  --code-fg:      #d0d0d0;
+  --code-border:  #000000;
+  --code-radius:  10px;
+  --code-pad:     0.75rem;
+  --code-font:    var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace);
+
+  /* Inline code chip */
+  --icode-bg:     rgba(21,21,21,.06);
+  --icode-fg:     inherit;
+  --icode-pad-y:  0.1rem;
+  --icode-pad-x:  0.35rem;
+  --icode-radius: 6px;
+
+  /* Clamp width to content area (falls back to 100%) */
+  --code-max-width: var(--content-max, 100%);
+}
+
+/* -------- Inline code -------- */
+:not(pre) > code,
+code.highlighter-rouge {
+  font-family: var(--code-font);
+  font-size: 0.95em;
+  background: var(--icode-bg);
+  color: var(--icode-fg);
+  padding: var(--icode-pad-y) var(--icode-pad-x);
+  border-radius: var(--icode-radius);
+  white-space: normal;        /* inline flows with text */
+}
+
+/* -------- Block code wrapper --------
+   Rouge usually emits:
+   <div class="highlight"><pre class="highlight language-..."><code>…</code></pre></div>
+   or a table for line numbers.
+------------------------------------- */
+.highlight {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border-radius: var(--code-radius);
+  margin: 1rem auto;                 /* center */
+  overflow: auto;
+  width: 100%;
+  max-width: var(--code-max-width);  /* clamp to page width */
+  /* Optional subtle border:
+  border: 1px solid var(--code-border);
+  */
+}
+
+/* The actual pre/code */
+.highlight pre,
+pre.highlight {
+  margin: 0;
+  padding: var(--code-pad);
+  font-family: var(--code-font);
+  font-size: 1rem;            /* was 1.2rem; scale from base instead */
+  line-height: 1.5;
+  white-space: pre;           /* keep code layout intact */
+  overflow-x: auto;
+  max-width: 100%;            /* respect clamp */
+  -webkit-overflow-scrolling: touch;
+}
+
+.highlight pre code {
+  display: block;
+  padding: 0;                 /* pre handles padding */
+  background: transparent;
+  color: inherit;
+  word-break: normal;         /* keep monospace words intact */
+}
+
+/* -------- Line numbers variant --------
+   Rouge can render a <table> with .gutter (numbers) and .code (content)
+--------------------------------------- */
+.highlight table {
+  display: block;     /* allow horizontal scroll within clamp */
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.highlight td {
+  padding: 0;
+  vertical-align: top;
+}
+
+.highlight td.gutter {
+  user-select: none;
+  padding: var(--code-pad) 0 var(--code-pad) var(--code-pad);
+  opacity: 0.65;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.highlight td.gutter pre {
+  padding: 0;
+  margin: 0;
+}
+
+.highlight td.code {
+  width: 100%;
+  padding-right: var(--code-pad);
+}
+
+.highlight td.code pre {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;    /* respect clamp */
+  overflow-x: auto;
+}
+
+/* -------- Token colors (your palette) -------- */
+.highlight, .highlight .w { color: #d0d0d0; background-color: #151515; }
+
+.highlight .err   { color: #151515; background-color: #ac4142; }  /* error */
+.highlight .c,
+.highlight .ch,
+.highlight .cd,
+.highlight .cm,
+.highlight .cpf,
+.highlight .c1,
+.highlight .cs   { color: #505050; }                                /* comments */
+.highlight .cp   { color: #f4bf75; }                                /* preproc */
+.highlight .nt   { color: #f4bf75; }                                /* tag name */
+
+.highlight .o,
+.highlight .ow   { color: #d0d0d0; }                                /* operators */
+.highlight .p,
+.highlight .pi   { color: #d0d0d0; }                                /* punctuation */
+
+.highlight .gi   { color: #90a959; }                                /* diff add */
+.highlight .gd   { color: #ac4142; }                                /* diff del */
+
+.highlight .gh   { color: #6a9fb5; background-color: #151515; font-weight: bold; } /* headers */
+
+.highlight .k,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kv   { color: #aa759f; }                                /* keywords */
+
+.highlight .kc,
+.highlight .kt,
+.highlight .kd   { color: #d28445; }                                /* types/defs */
+
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .s1   { color: #90a959; }                                /* strings */
+
+.highlight .sa   { color: #aa759f; }                                /* string affix */
+.highlight .sr   { color: #75b5aa; }                                /* regex */
+.highlight .si,
+.highlight .se   { color: #8f5536; }                                /* special */
+
+.highlight .nn,
+.highlight .nc,
+.highlight .no   { color: #f4bf75; }                                /* names */
+
+.highlight .na   { color: #6a9fb5; }                                /* attrs */
+
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mx   { color: #90a959; }                                /* numbers */
+
+.highlight .ss   { color: #90a959; }                                /* symbol */
+
+/* -------- Small screens: slightly smaller code to reduce overflow -------- */
+@media (max-width: 420px) {
+  .highlight pre,
+  pre.highlight { font-size: 0.95rem; }
+}
+
+/* -------- Optional: opt-in soft wrap for very long lines --------
+   Add class 'code-wrap' to .highlight to enable wrapping for that block only.
+------------------------------------------------------------------ */
+.highlight.code-wrap pre,
+.highlight.code-wrap pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Force wrapping for all code blocks */
+.highlight,
+pre.highlight {
+  overflow-x: hidden;                 /* hide horizontal scroll */
+}
+
+.highlight pre,
+pre.highlight {
+  white-space: pre-wrap;              /* wrap long lines */
+  word-break: break-word;             /* break long tokens */
+  overflow-wrap: anywhere;            /* extra safety for very long strings */
+}
+
+/* Rouge table (line numbers) variant */
+.highlight table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;                 /* no scroll */
+  table-layout: fixed;                /* prevent cells from expanding */
+}
+
+.highlight td {
+  padding: 0;
+  vertical-align: top;
+  word-break: break-word;             /* allow breaks in both cols */
+}
+
+.highlight td.code pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
