@@ -353,70 +353,43 @@ pre.highlight{
 }
 
 
+/* Taller navbar on mobile */
+@media (max-width: 600px) {
+  /* Bump the nav sizing tokens */
+  :root {
+    --nav-height: 64px;      /* was ~2.5rem; give thumbs 44px+ tap area */
+    --nav-font-size: 1.25rem;
+  }
 
-// /* ================================
-//    Make post pages match Archives
-//    ================================ */
+  /* Make the bar itself taller */
+  #nav_container {
+    height: var(--nav-height);
+    align-items: center;     /* center items vertically */
+    padding-block: 0;        /* height is controlled by the token */
+  }
 
-// /* 1) Same narrow reading width as Archives */
-// .article {
-//   max-width: var(--content-max, 70ch);
-//   margin: 0 auto;
-//   padding: 0 var(--content-pad, 1rem);
-//   font-family: var(--font-body);
-//   font-weight: 400;
-//   font-size: var(--font-size);
-//   line-height: var(--line);
-// }
+  /* Ensure the spacer matches the nav height */
+  #nav-spacer {
+    height: var(--nav-height);
+  }
 
-// /* 2) Title: use Archives-like scale + tone (subtle) */
-// .article .article-title,
-// .article > h1 {
-//   font-weight: 500;                 /* calmer than 700/800 */
-//   font-size: 1.6rem;                /* matches .archive-year scale */
-//   line-height: 1.25;
-//   letter-spacing: 0;
-//   margin: 2rem 0 0.75rem;           /* mirrors .archive-year spacing */
-//   color: var(--color-heading, #111);
-//   text-align: left;                 /* like Archives */
-//   text-decoration: none;            /* base element is plain */
-// }
+  /* Make link tap targets comfy */
+  #nav_container .nav_item a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    padding-block: 0.75rem;  /* extra vertical padding inside the taller bar */
+    font-size: var(--nav-font-size);
+  }
 
-// /* 3) Title link styling identical to archive links */
-// .article .article-title a,
-// .article > h1 a {
-//   color: inherit;
-//   text-decoration: underline;
-//   text-underline-offset: 2px;
-//   text-decoration-thickness: 1.5px;
-// }
+  /* Optional: tweak icon size if you have image buttons in the nav */
+  .nav-img-wrapper img {
+    height: 28px;            /* adjust to taste */
+    width: auto;
+  }
 
-// /* 4) In-article links: same look as Archives */
-// .article a {
-//   color: inherit;
-//   text-decoration: underline;
-//   text-underline-offset: 2px;
-//   text-decoration-thickness: 1.5px;
-// }
-
-// /* 5) Meta row: quieter, left-aligned like list context */
-// .article .meta {
-//   display: block;
-//   margin: 0 0 1rem;
-//   font-size: 0.95rem;
-//   color: var(--color-muted, #666);
-//   opacity: .85;
-//   text-align: left;
-// }
-// .article .meta .date,
-// .article .meta time { font-variant-numeric: tabular-nums; }
-
-// /* 6) Optional: unify underline weight everywhere */
-// .archive .archive-link {
-//   text-decoration: underline;
-//   text-underline-offset: 2px;
-//   text-decoration-thickness: 1.5px;
-// }
-
-// /* 7) (Optional but recommended) ensure real 500 weight is loaded */
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+  /* Optional: give the '|' spacers some breathing room */
+  .nav_spacer {
+    padding-inline: 0.4rem;
+  }
+}
