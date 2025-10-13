@@ -1,10 +1,16 @@
-<ul id="nav_container">
+<nav id="site-nav" aria-label="Primary">
+  <ul id="nav_container">
     <li class="nav_item" id="nav-site-name">
-      <a href="/">Home</a>
-    </li> 
+      <a href="{{ '/' | relative_url }}">Home</a>
+    </li>
     <li class="nav_item nav_spacer">|</li>
-    <li class="nav_item"><a href="/pages/archives.html">Archives</a></li> 
+    <li class="nav_item">
+      <a href="{{ '/pages/archives.html' | relative_url }}">Archives</a>
+    </li>
     <li class="nav_item nav_spacer">|</li>
-    <li class="nav_item"><a href="/pages/about">About</a></li> 
-</ul> 
+    <li class="nav_item">
+      <a href="{{ '/pages/about' | relative_url }}">About</a>
+    </li>
+  </ul>
+</nav>
 <div id="nav-spacer"></div>
