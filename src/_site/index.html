@@ -8,7 +8,15 @@
 
 <link rel="stylesheet" href="/nickk.info/assets/theme.css">
 </head>
-  <body>
+  <body><script src="https://unpkg.com/pixi.js@7.2.4/dist/pixi.min.js" defer></script>
+
+    <script src="/nickk.info/assets/js/pixi-bird-overlay.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        PixiBirdOverlay.init(); // or PixiBirdOverlay.init({ canvasId: 'my-canvas' })
+      });
+    </script>
+
     <nav id="site-nav" aria-label="Primary">
   <ul id="nav_container">
     <li class="nav_item" id="nav-site-name">

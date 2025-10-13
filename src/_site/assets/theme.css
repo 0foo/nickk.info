@@ -600,11 +600,6 @@ pre.highlight {
     padding-block: 0.75rem; /* extra vertical padding inside the taller bar */
     font-size: var(--nav-font-size);
   }
-  /* Optional: tweak icon size if you have image buttons in the nav */
-  .nav-img-wrapper img {
-    height: 28px; /* adjust to taste */
-    width: auto;
-  }
   /* Optional: give the '|' spacers some breathing room */
   .nav_spacer {
     padding-inline: 0.4rem;
